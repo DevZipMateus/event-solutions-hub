@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import heroBombeiros from "@/assets/hero-bombeiros.jpg";
-import heroBartenders from "@/assets/hero-bartenders.jpg";
+
 import heroStaff from "@/assets/hero-staff.jpg";
 import heroEquipe from "@/assets/hero-equipe.jpg";
 import heroRecepcionistas from "@/assets/hero-recepcionistas.jpg";
@@ -16,11 +16,6 @@ const HeroCarousel = () => {
       image: heroBombeiros,
       title: "Bombeiros Civis",
       subtitle: "Segurança e prevenção para seus eventos com profissionais qualificados",
-    },
-    {
-      image: heroBartenders,
-      title: "Bartenders Profissionais",
-      subtitle: "Coquetéis e drinks exclusivos para impressionar seus convidados",
     },
     {
       image: heroStaff,
