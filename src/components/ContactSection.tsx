@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, Send, Loader2 } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -242,9 +243,9 @@ const ContactSection = () => {
               <button
                 type="button"
                 onClick={openWhatsApp}
-                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-primary-foreground font-semibold py-4 px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg flex items-center justify-center gap-3"
+                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg flex items-center justify-center gap-3"
               >
-                <MessageCircle className="w-5 h-5" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" />
                 Conversar no WhatsApp
               </button>
             </form>
