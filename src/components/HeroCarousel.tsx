@@ -1,27 +1,46 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import heroImage from "@/assets/hero-placeholder.jpg";
+import heroBombeiros from "@/assets/hero-bombeiros.jpg";
+import heroBartenders from "@/assets/hero-bartenders.jpg";
+import heroStaff from "@/assets/hero-staff.jpg";
+import heroEquipe from "@/assets/hero-equipe.jpg";
+import heroRecepcionistas from "@/assets/hero-recepcionistas.jpg";
+import heroSeguranca from "@/assets/hero-seguranca.jpg";
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Placeholder images - will be replaced with actual images later
   const slides = [
     {
-      image: heroImage,
-      title: "Excelência em Eventos",
-      subtitle: "Transformamos seus eventos em experiências memoráveis",
+      image: heroBombeiros,
+      title: "Bombeiros Civis",
+      subtitle: "Segurança e prevenção para seus eventos com profissionais qualificados",
     },
     {
-      image: heroImage,
-      title: "Equipe Especializada",
-      subtitle: "Profissionais treinados para garantir o sucesso do seu evento",
+      image: heroBartenders,
+      title: "Bartenders Profissionais",
+      subtitle: "Coquetéis e drinks exclusivos para impressionar seus convidados",
     },
     {
-      image: heroImage,
-      title: "Soluções Completas",
-      subtitle: "Do planejamento à execução, cuidamos de cada detalhe",
+      image: heroStaff,
+      title: "Staff Especializado",
+      subtitle: "Equipe completa para suporte operacional do seu evento",
+    },
+    {
+      image: heroEquipe,
+      title: "Equipe Multidisciplinar",
+      subtitle: "Profissionais diversos para atender todas as suas necessidades",
+    },
+    {
+      image: heroRecepcionistas,
+      title: "Recepcionistas Elegantes",
+      subtitle: "Acolhimento profissional e cordial para seus convidados",
+    },
+    {
+      image: heroSeguranca,
+      title: "Segurança Patrimonial",
+      subtitle: "Proteção discreta e eficiente para seu evento",
     },
   ];
 
