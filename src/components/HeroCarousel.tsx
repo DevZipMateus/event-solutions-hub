@@ -14,27 +14,27 @@ const HeroCarousel = () => {
   const slides = [
     {
       image: heroBombeiros,
-      title: "Bombeiros Civis",
+      title: "Bombeiros",
       subtitle: "Segurança e prevenção para seus eventos com profissionais qualificados",
     },
     {
       image: heroStaff,
-      title: "Staff Especializado",
+      title: "Carregadores",
       subtitle: "Equipe completa para suporte operacional do seu evento",
     },
     {
       image: heroEquipe,
-      title: "Equipe Multidisciplinar",
-      subtitle: "Profissionais diversos para atender todas as suas necessidades",
+      title: "Limpeza",
+      subtitle: "Profissionais dedicados para manter seu evento impecável",
     },
     {
       image: heroRecepcionistas,
-      title: "Recepcionistas Elegantes",
+      title: "Recepcionistas",
       subtitle: "Acolhimento profissional e cordial para seus convidados",
     },
     {
       image: heroSeguranca,
-      title: "Segurança Patrimonial",
+      title: "Seguranças",
       subtitle: "Proteção discreta e eficiente para seu evento",
     },
   ];
