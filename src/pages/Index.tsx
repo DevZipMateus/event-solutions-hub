@@ -6,6 +6,7 @@ import CasesCarousel from "@/components/CasesCarousel";
 import ClientsSection from "@/components/ClientsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <ClientsSection />
       <ContactSection />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 };
