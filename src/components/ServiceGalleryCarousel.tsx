@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ServiceGalleryCarouselProps {
@@ -36,34 +36,40 @@ const ServiceGalleryCarousel = ({ images, title }: ServiceGalleryCarouselProps) 
 
   return (
     <div className="relative w-full">
-      {/* Main Image */}
-      <div className="relative aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-xl bg-muted">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentIndex}
-            src={images[currentIndex]}
-            alt={`${title} - Foto ${currentIndex + 1}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      {/* Main Image - responsive to image size */}
+      <div className="relative overflow-hidden rounded-xl bg-muted">
+        {images.map((image, index) => (
+          <motion.div
+            key={image}
+            initial={false}
+            animate={{
+              opacity: index === currentIndex ? 1 : 0,
+              zIndex: index === currentIndex ? 1 : 0,
+            }}
             transition={{ duration: 0.5 }}
-            className="w-full h-full object-contain"
-          />
-        </AnimatePresence>
+            className={`${index === currentIndex ? "relative" : "absolute inset-0"}`}
+          >
+            <img
+              src={image}
+              alt={`${title} - Foto ${index + 1}`}
+              className="w-full h-auto"
+            />
+          </motion.div>
+        ))}
 
         {/* Navigation Arrows */}
         {images.length > 1 && (
           <>
             <button
               onClick={goToPrevious}
-              className="absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+              className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
               aria-label="Imagem anterior"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
               aria-label="Próxima imagem"
             >
               <ChevronRight className="w-5 h-5" />
