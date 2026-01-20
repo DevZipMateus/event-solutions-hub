@@ -244,16 +244,20 @@ Atuação coordenada com produção e fornecedores para garantir fluxo adequado 
     icon: Building,
     title: "Locações para Eventos",
     slug: "locacoes",
-    description: "Tendas, banheiros químicos, ambulâncias, mobiliários e equipamentos para seu evento.",
+    description: "Estruturas e equipamentos com logística completa.",
     image: locacoesImg,
-    fullDescription: "Oferecemos locação completa de estruturas e equipamentos para eventos. Tendas, banheiros químicos, ambulâncias, mobiliários e muito mais com logística completa.",
+    fullDescription: `Fornecemos tendas, banheiros químicos, ambulâncias, mobiliários, equipamentos e demais soluções para estruturação do seu evento.
+
+Gestão de logística, montagem e operação coordenadas com fornecedores e produção, garantindo eficiência e segurança.
+
+Opções personalizadas conforme porte e necessidades, com foco em qualidade, sustentabilidade e atendimento.`,
     features: [
       "Tendas e coberturas",
       "Banheiros químicos",
       "Ambulâncias",
       "Mobiliário para eventos",
-      "Equipamentos de som e luz",
-      "Logística completa",
+      "Gestão de logística e montagem",
+      "Opções personalizadas",
     ],
     gallery: [],
   },
