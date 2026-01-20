@@ -55,8 +55,11 @@ const HeroCarousel = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen min-h-[600px] overflow-hidden">
-      <AnimatePresence mode="wait">
+    <section id="home" className="relative h-screen min-h-[600px] overflow-hidden bg-foreground">
+      {/* Background layer to prevent white flash */}
+      <div className="absolute inset-0 bg-foreground" />
+      
+      <AnimatePresence initial={false}>
         <motion.div
           key={currentSlide}
           initial={{ opacity: 0 }}
