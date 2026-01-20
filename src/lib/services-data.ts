@@ -37,9 +37,13 @@ export const services: Service[] = [
     icon: Sparkles,
     title: "Limpeza para Eventos",
     slug: "limpeza",
-    description: "Equipe especializada em limpeza e organização de espaços para eventos.",
+    description: "Ambientes impecáveis antes, durante e pós-evento.",
     image: limpezaImg,
-    fullDescription: "Nossa equipe de limpeza é altamente treinada para garantir a higiene e organização do seu evento do início ao fim. Trabalhamos com produtos de qualidade e técnicas eficientes para manter todos os espaços impecáveis.",
+    fullDescription: `A limpeza para eventos é um fator crucial para o sucesso de qualquer evento corporativo em São Paulo. Nossa equipe especializada garante ambientes impecáveis antes, durante e após a realização do seu projeto, assegurando o conforto e a segurança sanitária de todos os participantes. Atuamos com discrição e eficiência, realizando a higienização de áreas comuns, banheiros, praças de alimentação e estandes.
+
+Entendemos que cada evento corporativo em São Paulo possui particularidades, por isso, elaboramos um plano de limpeza personalizado que se adapta ao fluxo de pessoas e à estrutura do local. Utilizamos produtos de alta performance e equipamentos adequados para diferentes tipos de superfícies, sempre respeitando as normas ambientais e de segurança.
+
+Seja um congresso, feira, workshop ou confraternização, conte com nossa excelência em serviços de limpeza. Mantenha a imagem da sua empresa impecável e proporcione uma experiência agradável aos seus convidados com nosso suporte profissional.`,
     features: [
       "Limpeza pré-evento",
       "Manutenção durante o evento",
