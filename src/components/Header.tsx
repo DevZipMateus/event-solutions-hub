@@ -1,19 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo_confidence.png";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navItems = [
     { label: "Início", href: "#home" },
@@ -33,11 +24,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-background shadow-lg"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
@@ -45,9 +32,7 @@ const Header = () => {
             <img
               src={logo}
               alt="Confidence Eventos"
-              className={`h-12 md:h-14 w-auto transition-all duration-300 ${
-                isScrolled ? "" : "brightness-0 invert"
-              }`}
+              className="h-12 md:h-14 w-auto"
             />
           </a>
 
@@ -57,11 +42,7 @@ const Header = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`transition-colors duration-200 font-medium text-sm tracking-wide ${
-                  isScrolled 
-                    ? "text-foreground hover:text-primary" 
-                    : "text-white hover:text-primary drop-shadow-md"
-                }`}
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide"
               >
                 {item.label}
               </button>
@@ -70,7 +51,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 ${isScrolled ? "text-foreground" : "text-white"}`}
+            className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
