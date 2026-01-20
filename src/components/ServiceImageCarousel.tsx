@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ServiceImageCarouselProps {
@@ -8,16 +8,6 @@ interface ServiceImageCarouselProps {
 
 const ServiceImageCarousel = ({ images, alt }: ServiceImageCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    if (images.length <= 1) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
 
   if (images.length === 0) return null;
 
