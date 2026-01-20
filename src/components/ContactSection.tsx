@@ -91,28 +91,29 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-20 md:py-28 bg-background overflow-hidden">
+    <section id="contato" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center">
           {/* Left Side - Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center lg:text-left"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 sm:mb-6">
               Fale com um de nossos especialistas
             </h2>
-            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-              <p className="text-xl font-semibold text-foreground">
+            <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg sm:text-xl font-semibold text-foreground">
                 Vamos conversar!
               </p>
               <p>
                 Estamos prontos para ouvir suas necessidades e oferecer soluções
                 personalizadas para alcançar seus objetivos.
               </p>
-              <p>Que tal agendar uma conversa para explorar as possibilidades?</p>
+              <p className="hidden sm:block">Que tal agendar uma conversa para explorar as possibilidades?</p>
             </div>
           </motion.div>
 
@@ -123,15 +124,15 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <p className="text-sm text-muted-foreground mb-4">
-                Os campos em destaque <span className="text-destructive font-medium">vermelho</span> são obrigatórios para o envio do formulário.
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
+                Os campos em destaque <span className="text-destructive font-medium">vermelho</span> são obrigatórios.
               </p>
 
               <div>
                 <label
                   htmlFor="nome"
-                  className="block text-sm font-medium text-foreground mb-2"
+                  className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2"
                 >
                   Nome: <span className="text-destructive">*</span>
                 </label>
@@ -142,7 +143,7 @@ const ContactSection = () => {
                   value={formData.nome}
                   onChange={handleChange}
                   placeholder="Seu nome"
-                  className="w-full px-4 py-3 rounded-lg border-2 border-destructive/50 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 border-destructive/50 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-sm sm:text-base"
                   required
                 />
               </div>
@@ -150,7 +151,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-foreground mb-2"
+                  className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2"
                 >
                   Email: <span className="text-destructive">*</span>
                 </label>
@@ -161,7 +162,7 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="seu@email.com"
-                  className="w-full px-4 py-3 rounded-lg border-2 border-destructive/50 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 border-destructive/50 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-sm sm:text-base"
                   required
                 />
               </div>
@@ -169,7 +170,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="telefone"
-                  className="block text-sm font-medium text-foreground mb-2"
+                  className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2"
                 >
                   (DDD) Telefone: <span className="text-destructive">*</span>
                 </label>
@@ -180,7 +181,7 @@ const ContactSection = () => {
                   value={formData.telefone}
                   onChange={handleChange}
                   placeholder="(11) 1234-5678"
-                  className="w-full px-4 py-3 rounded-lg border-2 border-destructive/50 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 border-destructive/50 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-sm sm:text-base"
                   required
                 />
               </div>
@@ -188,7 +189,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="celular"
-                  className="block text-sm font-medium text-foreground mb-2"
+                  className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2"
                 >
                   Celular:
                 </label>
@@ -199,14 +200,14 @@ const ContactSection = () => {
                   value={formData.celular}
                   onChange={handleChange}
                   placeholder="(11) 9 1234-5678"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-sm sm:text-base"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="solicitacao"
-                  className="block text-sm font-medium text-foreground mb-2"
+                  className="block text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2"
                 >
                   Solicitação:
                 </label>
@@ -216,8 +217,8 @@ const ContactSection = () => {
                   value={formData.solicitacao}
                   onChange={handleChange}
                   placeholder="Descreva sua solicitação..."
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 resize-none"
+                  rows={3}
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 resize-none text-sm sm:text-base"
                 />
               </div>
 
@@ -235,16 +236,16 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
                     Enviando...
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
+                    <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                     Enviar
                   </>
                 )}
@@ -264,9 +265,9 @@ const ContactSection = () => {
               <button
                 type="button"
                 onClick={openWhatsApp}
-                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg flex items-center justify-center gap-3"
+                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base"
               >
-                <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
                 Conversar no WhatsApp
               </button>
             </form>
