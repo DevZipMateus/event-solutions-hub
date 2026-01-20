@@ -65,9 +65,13 @@ Seja um congresso, feira, workshop ou confraternização, conte com nossa excel�
     icon: Flame,
     title: "Bombeiro Civil para Eventos",
     slug: "bombeiros",
-    description: "Profissionais habilitados para garantir a segurança contra incêndios.",
+    description: "Prevenção, protocolos e resposta rápida.",
     image: bombeirosImg,
-    fullDescription: "Nossos bombeiros civis são profissionais certificados e preparados para atuar na prevenção e combate a incêndios, além de primeiros socorros. Garantimos a segurança do seu evento conforme as normas vigentes.",
+    fullDescription: `A segurança é prioridade absoluta em qualquer evento corporativo em São Paulo. Nossa equipe de Bombeiro Civil atua na prevenção e combate a incêndios, primeiros socorros e gestão de riscos, garantindo a tranquilidade de organizadores e convidados. Seguimos rigorosamente as normas técnicas e legislações vigentes para assegurar que seu evento esteja em total conformidade.
+
+Nossos profissionais são altamente treinados para agir com rapidez e precisão em situações de emergência, realizando vistorias prévias, monitoramento constante e orientação de público. A presença de bombeiros civis qualificados é fundamental para a proteção da vida e do patrimônio, especialmente em locais de grande circulação.
+
+Garanta o sucesso do seu evento corporativo em São Paulo com nossa equipe de bombeiros civis. Oferecemos planejamento estratégico de segurança, equipamentos modernos e profissionais preparados para lidar com qualquer imprevisto, permitindo que você foque no que realmente importa: o conteúdo e a experiência do seu evento.`,
     features: [
       "Brigada de incêndio certificada",
       "Plano de evacuação",
