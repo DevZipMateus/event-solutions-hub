@@ -195,15 +195,19 @@ Seja para concertos, exposições, encontros corporativos, celebrações privada
     icon: UtensilsCrossed,
     title: "Garçons para Eventos",
     slug: "buffet",
-    description: "Garçons profissionais para um atendimento impecável.",
+    description: "Atendimento qualificado em A&B.",
     image: buffetImg,
-    fullDescription: "Nossos garçons são profissionais experientes e treinados para oferecer um serviço de alta qualidade. Garantimos um atendimento elegante e eficiente.",
+    fullDescription: `Profissionais treinados para serviço de alimentos e bebidas, postura adequada e eficiência na operação.
+
+Atendimento ao público com cordialidade, organização de salão e suporte à produção de catering.
+
+Ideal para coquetéis, jantares, feiras e eventos corporativos que demandam serviço de A&B.`,
     features: [
-      "Serviço de mesa",
-      "Serviço volante",
-      "Bar service",
-      "Montagem de buffet",
-      "Atendimento personalizado",
+      "Serviço de alimentos e bebidas",
+      "Postura profissional",
+      "Organização de salão",
+      "Suporte à produção de catering",
+      "Atendimento cordial",
       "Uniformizados",
     ],
     gallery: [
