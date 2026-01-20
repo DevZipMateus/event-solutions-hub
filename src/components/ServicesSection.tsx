@@ -11,60 +11,71 @@ import {
   Building,
 } from "lucide-react";
 
+// Import service images
+import limpezaImg from "@/assets/services/limpeza.jpg";
+import bombeirosImg from "@/assets/services/bombeiros.jpg";
+import carregadoresImg from "@/assets/services/carregadores.jpg";
+import tradutoresImg from "@/assets/services/tradutores.jpg";
+import recepcionistasImg from "@/assets/services/recepcionistas.jpg";
+import segurancasImg from "@/assets/services/segurancas.jpg";
+import buffetImg from "@/assets/services/buffet.jpg";
+import staffImg from "@/assets/services/staff.jpg";
+import locacoesImg from "@/assets/services/locacoes.jpg";
+
 const services = [
   {
     icon: Sparkles,
     title: "Limpeza para Eventos",
     description: "Equipe especializada em limpeza e organização de espaços para eventos.",
-    image: "",
+    image: limpezaImg,
   },
   {
     icon: Flame,
     title: "Bombeiro Civil para Eventos",
     description: "Profissionais habilitados para garantir a segurança contra incêndios.",
-    image: "",
+    image: bombeirosImg,
   },
   {
     icon: Package,
     title: "Carregadores para Eventos",
     description: "Equipe de carregadores para montagem e desmontagem de eventos.",
-    image: "",
+    image: carregadoresImg,
   },
   {
     icon: Languages,
     title: "Tradutores para Eventos",
     description: "Tradutores e intérpretes para eventos internacionais.",
-    image: "",
+    image: tradutoresImg,
   },
   {
     icon: UserCheck,
     title: "Recepcionista para Eventos",
     description: "Recepcionistas treinadas para acolher seus convidados.",
-    image: "",
+    image: recepcionistasImg,
   },
   {
     icon: Shield,
     title: "Seguranças para Eventos",
     description: "Segurança privada qualificada para proteção do seu evento.",
-    image: "",
+    image: segurancasImg,
   },
   {
     icon: UtensilsCrossed,
     title: "Garçons para Eventos",
     description: "Garçons profissionais para um atendimento impecável.",
-    image: "",
+    image: buffetImg,
   },
   {
     icon: Users,
     title: "Staff para Eventos",
     description: "Equipe de apoio completa para todas as necessidades do evento.",
-    image: "",
+    image: staffImg,
   },
   {
     icon: Building,
     title: "Locações para Eventos",
     description: "Espaços exclusivos para realizar seu evento com excelência.",
-    image: "",
+    image: locacoesImg,
   },
 ];
 
@@ -120,27 +131,23 @@ const ServicesSection = () => {
             <motion.div
               key={service.title}
               variants={itemVariants}
-              className="group bg-card rounded-xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30"
+              className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30"
             >
-              {service.image ? (
-                <div className="relative w-full h-48 rounded-lg overflow-hidden mb-5">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              ) : (
-                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                  <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-                </div>
-              )}
-              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
+              <div className="relative w-full h-48 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
