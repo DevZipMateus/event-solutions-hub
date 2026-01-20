@@ -36,8 +36,8 @@ const ServiceGalleryCarousel = ({ images, title }: ServiceGalleryCarouselProps) 
 
   return (
     <div className="relative w-full">
-      {/* Main Image - responsive to image size */}
-      <div className="relative overflow-hidden rounded-xl bg-muted">
+      {/* Main Image - responsive to image size with max height limit */}
+      <div className="relative overflow-hidden rounded-xl bg-muted flex items-center justify-center">
         {images.map((image, index) => (
           <motion.div
             key={image}
@@ -47,12 +47,12 @@ const ServiceGalleryCarousel = ({ images, title }: ServiceGalleryCarouselProps) 
               zIndex: index === currentIndex ? 1 : 0,
             }}
             transition={{ duration: 0.5 }}
-            className={`${index === currentIndex ? "relative" : "absolute inset-0"}`}
+            className={`flex items-center justify-center ${index === currentIndex ? "relative" : "absolute inset-0"}`}
           >
             <img
               src={image}
               alt={`${title} - Foto ${index + 1}`}
-              className="w-full h-auto"
+              className="max-w-full max-h-[500px] w-auto h-auto object-contain"
             />
           </motion.div>
         ))}
