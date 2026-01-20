@@ -167,16 +167,20 @@ Abrangendo feiras, congressos, lançamentos, eventos corporativos ou celebraçõ
     icon: Shield,
     title: "Seguranças para Eventos",
     slug: "segurancas",
-    description: "Segurança privada qualificada para proteção do seu evento.",
+    description: "Proteção e tranquilidade para todos.",
     image: segurancasImg,
-    fullDescription: "Nossa equipe de segurança é composta por profissionais treinados e habilitados para garantir a proteção do seu evento. Atuamos com discrição e eficiência.",
+    fullDescription: `Nossa equipe de Proteção e Segurança para Eventos é composta por seguranças para evento profissionais altamente qualificados e rigorosamente treinados para assegurar a salvaguarda de participantes, ativos e a fluidez do seu evento. Com uma abordagem estratégica e sutil, eles executam o controle de acesso, vigiam o ambiente, antecipam incidentes e administram prontamente situações de risco, garantindo um evento íntegro e impecavelmente organizado.
+
+Dispomos de especialistas aptos a atuar em eventos de diversas magnitudes – de pequeno a grande porte –, moldando-se precisamente às demandas singulares de cada celebração. Nossa equipe adota diretrizes estritas de segurança, mantendo uma conduta impecável e vigilância constante para proporcionar serenidade total ao público, promotores e convidados.
+
+Seja para concertos, exposições, encontros corporativos, celebrações privadas ou mega produções, oferecemos um serviço de segurança para eventos excepcional e eficaz, criando um espaço seguro para todos. Confie em nossa vasta experiência para um evento totalmente resguardado e livre de contratempos.`,
     features: [
-      "Controle de acesso",
-      "Segurança patrimonial",
-      "Escolta VIP",
-      "Monitoramento",
-      "Rondas preventivas",
-      "Equipe armada e desarmada",
+      "Controle de acesso estratégico",
+      "Vigilância constante",
+      "Prevenção de incidentes",
+      "Gestão de situações de risco",
+      "Eventos de pequeno a grande porte",
+      "Conduta profissional impecável",
     ],
     gallery: [
       "/seguranças/_WIL5980.JPG",
