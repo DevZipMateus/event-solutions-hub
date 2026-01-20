@@ -139,16 +139,20 @@ Ideal para congressos, feiras e eventos corporativos com conteúdo internacional
     icon: UserCheck,
     title: "Recepcionista para Eventos",
     slug: "recepcionistas",
-    description: "Recepcionistas treinadas para acolher seus convidados.",
+    description: "A primeira impressão é a que fica.",
     image: recepcionistasImg,
-    fullDescription: "Nossas recepcionistas são profissionais elegantes e bem treinadas para recepcionar seus convidados com excelência. Garantimos um atendimento cordial e eficiente.",
+    fullDescription: `Nossas Recepcionistas para Eventos, sejam elas bilíngues ou monolíngues, são colaboradoras especializadas e meticulosamente treinadas para prestar um acolhimento de excelência, assegurando organização rigorosa, fluidez operacional e uma recepção calorosa aos participantes. Elas se dedicam ao credenciamento estratégico, à boas-vindas aos convidados, à orientação detalhada sobre o cronograma e logística, à gestão de acessos e ao suporte integral, sempre com cordialidade, prontidão e a devida postura profissional.
+
+Para encontros nacionais e internacionais, nossas recepcionistas bilíngues garantem uma interlocução eficaz com os visitantes estrangeiros, proporcionando uma vivência acessível e de elevado padrão. Adicionalmente, cada Recepcionista para Evento é capacitada a interagir com diversos perfis de público, mantendo um nível de serviço superior e projetando a melhor imagem da sua instituição ou marca.
+
+Abrangendo feiras, congressos, lançamentos, eventos corporativos ou celebrações sociais, nosso time de recepção está pronto para endossar sua empresa com máximo profissionalismo, resultando em um evento perfeitamente orquestrado e uma experiência inesquecível para todos os presentes!`,
     features: [
-      "Recepção de convidados",
-      "Credenciamento",
-      "Orientação aos participantes",
-      "Controle de acesso",
-      "Atendimento VIP",
-      "Uniformizadas conforme evento",
+      "Recepção bilíngue e monolíngue",
+      "Credenciamento estratégico",
+      "Boas-vindas e orientação",
+      "Gestão de acessos",
+      "Suporte integral aos participantes",
+      "Postura profissional e cordial",
     ],
     gallery: [
       "/recepcionista/_WIL6060.JPG",
