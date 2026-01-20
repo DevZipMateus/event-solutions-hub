@@ -45,18 +45,35 @@ const ServicesSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Side - Person Image */}
+          {/* Left Side - Person Image with Background Effect */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="hidden lg:flex lg:col-span-3 justify-center items-center"
+            className="hidden lg:flex lg:col-span-3 justify-center items-center relative"
           >
+            {/* Diamond shape background */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div 
+                className="w-72 h-72 bg-primary rotate-45 rounded-3xl opacity-90 shadow-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)/0.7) 100%)'
+                }}
+              />
+            </div>
+            {/* Small decorative squares */}
+            <div className="absolute bottom-16 right-0 w-6 h-6 border-2 border-primary/40 rotate-12" />
+            <div className="absolute bottom-24 right-4 w-4 h-4 border-2 border-primary/30 rotate-45" />
+            <div className="absolute bottom-8 right-8 w-3 h-3 bg-primary/20 rotate-12" />
+            <div className="absolute top-20 left-0 w-5 h-5 border-2 border-primary/30 rotate-45" />
+            <div className="absolute top-32 left-4 w-3 h-3 bg-primary/20 rotate-12" />
+            
+            {/* Person image */}
             <img
               src={servicesPerson}
               alt="Profissional Confidence Eventos"
-              className="max-h-[850px] object-contain drop-shadow-2xl"
+              className="relative z-10 max-h-[850px] object-contain drop-shadow-2xl"
             />
           </motion.div>
 
