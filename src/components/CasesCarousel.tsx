@@ -42,7 +42,7 @@ const CasesCarousel = () => {
   const visibleCases = cases.slice(currentSlide * 2, currentSlide * 2 + 2);
 
   return (
-    <section id="cases" className="py-20 md:py-28 bg-background">
+    <section id="cases" className="py-20 md:py-28 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -70,7 +70,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-20 md:py-28 bg-background">
+    <section id="contato" className="py-20 md:py-28 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Side - Text */}
