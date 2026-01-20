@@ -118,16 +118,20 @@ Nossa atuação é coordenada com fornecedores e produção, reduzindo riscos e 
     icon: Languages,
     title: "Tradutores para Eventos",
     slug: "tradutores",
-    description: "Tradutores e intérpretes para eventos internacionais.",
+    description: "Apoio bilíngue e tradução simultânea.",
     image: tradutoresImg,
-    fullDescription: "Oferecemos serviços de tradução simultânea e consecutiva para eventos internacionais. Nossa equipe de tradutores é fluente em diversos idiomas e preparada para garantir a comunicação eficaz.",
+    fullDescription: `Oferecemos tradutores e intérpretes para recepção de convidados internacionais, tradução simultânea em palestras e suporte em múltiplos idiomas.
+
+Equipe preparada para atuar com discrição e eficiência, alinhada à identidade do evento e às necessidades do seu público.
+
+Ideal para congressos, feiras e eventos corporativos com conteúdo internacional e presença de convidados estrangeiros.`,
     features: [
       "Tradução simultânea",
-      "Tradução consecutiva",
+      "Recepção bilíngue",
       "Intérpretes especializados",
       "Múltiplos idiomas",
-      "Equipamentos de tradução",
-      "Suporte técnico",
+      "Suporte em palestras",
+      "Atendimento discreto e profissional",
     ],
     gallery: [],
   },
