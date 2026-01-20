@@ -27,6 +27,24 @@ const CasesCarousel = () => {
         "/cases/thiago-rosinhole-3.jpg",
       ],
     },
+    {
+      id: "saudosa-maloca",
+      clientName: "Cliente Do Saudosa Maloca",
+      eventName: "Festival de Samba",
+      testimonial:
+        "Trabalhar com a Confidence Eventos no nosso evento foi uma experiência de total tranquilidade. A qualidade da mão de obra é notável. Desde a segurança, que manteve tudo sob controle com discrição e eficiência, até os carregadores e a equipe de limpeza, que foram incrivelmente ágeis e organizados. Eles são sinônimo de profissionalismo e pontualidade. Agradecemos por tornarem a logística do nosso evento impecável!",
+      images: [
+        "/cases/saudosa-maloca-1.jpg",
+        "/cases/saudosa-maloca-2.jpg",
+        "/cases/saudosa-maloca-3.jpg",
+        "/cases/saudosa-maloca-4.jpg",
+        "/cases/saudosa-maloca-5.jpg",
+        "/cases/saudosa-maloca-6.jpg",
+        "/cases/saudosa-maloca-7.jpg",
+        "/cases/saudosa-maloca-8.jpg",
+        "/cases/saudosa-maloca-9.jpg",
+      ],
+    },
   ];
 
   const nextSlide = () => {
