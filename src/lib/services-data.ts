@@ -223,16 +223,20 @@ Ideal para coquetéis, jantares, feiras e eventos corporativos que demandam serv
     icon: Users,
     title: "Staff para Eventos",
     slug: "staff",
-    description: "Equipe de apoio completa para todas as necessidades do evento.",
+    description: "Apoio operacional e organização.",
     image: staffImg,
-    fullDescription: "Nossa equipe de staff é versátil e preparada para atender todas as demandas do seu evento. Desde apoio logístico até suporte aos convidados.",
+    fullDescription: `Equipe de staff para credenciamento, orientação de público, organização de filas e apoio logístico.
+
+Profissionais com postura e comunicação alinhadas à identidade do evento, focados em eficiência e experiência dos participantes.
+
+Atuação coordenada com produção e fornecedores para garantir fluxo adequado e cumprimento de cronograma.`,
     features: [
+      "Credenciamento",
+      "Orientação de público",
+      "Organização de filas",
       "Apoio logístico",
-      "Suporte aos convidados",
-      "Distribuição de materiais",
-      "Orientação de filas",
-      "Apoio técnico",
-      "Flexibilidade de funções",
+      "Comunicação alinhada ao evento",
+      "Atuação coordenada com produção",
     ],
     gallery: [],
   },
