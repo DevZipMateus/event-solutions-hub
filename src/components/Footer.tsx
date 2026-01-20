@@ -3,7 +3,7 @@ import logo from "@/assets/logo_confidence.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground py-12 md:py-16">
+    <footer className="bg-foreground py-12 md:py-16 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Logo */}
