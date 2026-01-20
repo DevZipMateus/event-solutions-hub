@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo_confidence.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === "/";
 
   const navItems = [
     { label: "Início", href: "#home" },
@@ -15,9 +19,24 @@ const Header = () => {
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    setIsMobileMenuOpen(false);
+    
+    if (isHomePage) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to home page with the section hash
+      navigate("/" + href);
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (isHomePage) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
     }
     setIsMobileMenuOpen(false);
   };
@@ -28,13 +47,13 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
-          <a href="#home" onClick={() => scrollToSection("#home")}>
+          <button onClick={handleLogoClick}>
             <img
               src={logo}
               alt="Confidence Eventos"
               className="h-12 md:h-14 w-auto"
             />
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
