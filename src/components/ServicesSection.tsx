@@ -44,19 +44,19 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Side - Person Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="hidden lg:flex lg:col-span-3 justify-center items-end sticky top-24"
+            className="hidden lg:flex lg:col-span-3 justify-center items-center"
           >
             <img
               src={servicesPerson}
               alt="Profissional Confidence Eventos"
-              className="max-h-[600px] object-contain drop-shadow-2xl"
+              className="max-h-[550px] object-contain drop-shadow-2xl"
             />
           </motion.div>
 
