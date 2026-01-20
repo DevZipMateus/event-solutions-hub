@@ -5,6 +5,7 @@ import { getServiceBySlug, services } from "@/lib/services-data";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ServiceGalleryCarousel from "@/components/ServiceGalleryCarousel";
 import { Button } from "@/components/ui/button";
 
 const ServicePage = () => {
@@ -110,28 +111,17 @@ const ServicePage = () => {
                   ))}
                 </div>
 
-                {/* Gallery */}
+                {/* Gallery Carousel */}
                 {service.gallery.length > 0 && (
                   <>
                     <h3 className="text-xl font-semibold text-foreground mb-6">
                       Galeria
                     </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-                      {service.gallery.map((image, index) => (
-                        <motion.div
-                          key={image}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                          className="overflow-hidden rounded-xl bg-muted flex items-center justify-center"
-                        >
-                          <img
-                            src={image}
-                            alt={`${service.title} - Foto ${index + 1}`}
-                            className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300"
-                          />
-                        </motion.div>
-                      ))}
+                    <div className="mb-12">
+                      <ServiceGalleryCarousel
+                        images={service.gallery}
+                        title={service.title}
+                      />
                     </div>
                   </>
                 )}
