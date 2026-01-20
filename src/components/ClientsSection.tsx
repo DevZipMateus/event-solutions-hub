@@ -1,14 +1,53 @@
 import { motion } from "framer-motion";
+import { Quote } from "lucide-react";
+
+interface ClientTestimonial {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  testimonial: string;
+  initials: string;
+}
 
 const ClientsSection = () => {
-  // Placeholder clients - can be replaced with actual logos later
-  const clients = [
-    "Cliente 1",
-    "Cliente 2",
-    "Cliente 3",
-    "Cliente 4",
-    "Cliente 5",
-    "Cliente 6",
+  const clients: ClientTestimonial[] = [
+    {
+      id: "ricardo",
+      name: "Ricardo Mendes",
+      role: "Diretor Executivo",
+      company: "TechBrasil",
+      testimonial:
+        "A Confidence Eventos superou todas as nossas expectativas na organização do nosso evento corporativo anual. A atenção aos detalhes e o profissionalismo da equipe foram impressionantes.",
+      initials: "RM",
+    },
+    {
+      id: "carla",
+      name: "Carla Oliveira",
+      role: "Coord. Sustentabilidade",
+      company: "EcoVerde",
+      testimonial:
+        "Contratamos a Confidence para nossa conferência de sustentabilidade e ficamos impressionados com o compromisso ambiental demonstrado em cada aspecto do evento.",
+      initials: "CO",
+    },
+    {
+      id: "fernando",
+      name: "Fernando Almeida",
+      role: "Gerente Mkt",
+      company: "Assoc. Comercial",
+      testimonial:
+        "Nossa feira de negócios foi um sucesso absoluto graças à Confidence Eventos. Desde o planejamento inicial até a desmontagem, a equipe demonstrou excelência em cada etapa.",
+      initials: "FA",
+    },
+    {
+      id: "ana",
+      name: "Dra. Ana Paula Santos",
+      role: "Diretora",
+      company: "ABM",
+      testimonial:
+        "A organização do nosso congresso médico pela Confidence foi impecável. A equipe cuidou de cada detalhe, desde a recepção até a coordenação das sessões paralelas.",
+      initials: "AP",
+    },
   ];
 
   return (
@@ -34,20 +73,36 @@ const ClientsSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {clients.map((client, index) => (
             <motion.div
-              key={client}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              key={client.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex items-center justify-center p-6 bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 group"
+              className="bg-card rounded-xl border border-border p-6 hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
-              <span className="text-muted-foreground group-hover:text-primary font-medium transition-colors duration-300">
-                {client}
-              </span>
+              <Quote className="w-8 h-8 text-primary/30 mb-4" />
+              <blockquote className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">
+                "{client.testimonial}"
+              </blockquote>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-primary font-semibold text-sm">
+                    {client.initials}
+                  </span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground text-sm">
+                    {client.name}
+                  </p>
+                  <p className="text-muted-foreground text-xs">
+                    {client.role}, {client.company}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
