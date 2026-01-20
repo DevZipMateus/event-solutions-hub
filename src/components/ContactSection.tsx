@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -46,19 +47,39 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          nome: formData.nome.trim(),
+          email: formData.email.trim(),
+          telefone: formData.telefone.trim(),
+          celular: formData.celular.trim(),
+          mensagem: formData.solicitacao.trim() || `Contato via formulário. Telefone: ${formData.telefone}${formData.celular ? `, Celular: ${formData.celular}` : ''}`,
+        },
+      });
 
-    toast.success("Mensagem enviada com sucesso! Em breve entraremos em contato.");
-    setFormData({
-      nome: "",
-      email: "",
-      telefone: "",
-      celular: "",
-      solicitacao: "",
-      honeypot: "",
-    });
-    setIsSubmitting(false);
+      if (error) {
+        console.error("Error sending email:", error);
+        toast.error("Erro ao enviar mensagem. Tente novamente.");
+        return;
+      }
+
+      console.log("Email sent successfully:", data);
+      toast.success("Mensagem enviada com sucesso! Em breve entraremos em contato.");
+      setFormData({
+        nome: "",
+        email: "",
+        telefone: "",
+        celular: "",
+        solicitacao: "",
+        honeypot: "",
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Erro ao enviar mensagem. Tente novamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const openWhatsApp = () => {
