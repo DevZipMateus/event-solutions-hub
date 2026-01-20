@@ -75,28 +75,55 @@ const Header = () => {
                 Serviços
                 <ChevronDown 
                   size={16} 
-                  className={`transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} 
+                  className={`transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} 
                 />
               </button>
 
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-xl z-50 py-2"
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ 
+                      duration: 0.2, 
+                      ease: [0.4, 0, 0.2, 1]
+                    }}
+                    className="absolute top-full left-0 mt-2 w-72 bg-background border border-border rounded-xl shadow-2xl z-50 py-3 overflow-hidden"
                   >
-                    {services.map((service) => (
-                      <button
-                        key={service.slug}
-                        onClick={() => handleServiceClick(service.slug)}
-                        className="w-full text-left px-4 py-2.5 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors duration-200"
-                      >
-                        {service.title}
-                      </button>
-                    ))}
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      variants={{
+                        hidden: {},
+                        visible: {
+                          transition: {
+                            staggerChildren: 0.04
+                          }
+                        }
+                      }}
+                    >
+                      {services.map((service) => {
+                        const IconComponent = service.icon;
+                        return (
+                          <motion.button
+                            key={service.slug}
+                            variants={{
+                              hidden: { opacity: 0, x: -20 },
+                              visible: { opacity: 1, x: 0 }
+                            }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                            onClick={() => handleServiceClick(service.slug)}
+                            className="w-full flex items-center gap-3 text-left px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200 group"
+                          >
+                            <span className="p-2 rounded-lg bg-muted group-hover:bg-primary/20 transition-colors duration-200">
+                              <IconComponent size={18} className="text-primary" />
+                            </span>
+                            <span className="font-medium">{service.title}</span>
+                          </motion.button>
+                        );
+                      })}
+                    </motion.div>
                   </motion.div>
                 )}
               </AnimatePresence>
