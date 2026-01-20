@@ -3,9 +3,9 @@ import bannerImage from "@/assets/section-banner.jpg";
 
 const BannerSection = () => {
   return (
-    <section className="relative h-[400px] md:h-[500px] overflow-hidden">
+    <section className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        className="absolute inset-0 bg-cover bg-center md:bg-fixed"
         style={{ backgroundImage: `url(${bannerImage})` }}
       />
       <div className="absolute inset-0 bg-primary/60" />
@@ -16,14 +16,14 @@ const BannerSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center"
+          className="text-center px-4"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-foreground mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-foreground mb-4 md:mb-6 leading-tight">
             Transformamos Ideias em
             <br />
             Experiências Inesquecíveis
           </h2>
-          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">
             Há mais de uma década, a Confidence Eventos entrega excelência e profissionalismo 
             em cada projeto que realizamos.
           </p>

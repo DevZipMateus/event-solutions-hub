@@ -51,19 +51,19 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section id="clientes" className="py-20 md:py-28 bg-muted overflow-hidden">
+    <section id="clientes" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-muted overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-3 md:mb-4">
             Nossos Clientes
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
             Empresas que confiam em nosso trabalho
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ const ClientsSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6"
         >
           {clients.map((client, index) => (
             <motion.div
@@ -82,23 +82,23 @@ const ClientsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-card rounded-xl border border-border p-6 hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
+              className="bg-card rounded-xl border border-border p-4 sm:p-5 md:p-6 hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
-              <Quote className="w-8 h-8 text-primary/30 mb-4" />
-              <blockquote className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">
+              <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-primary/30 mb-3 sm:mb-4" />
+              <blockquote className="text-muted-foreground text-xs sm:text-sm leading-relaxed flex-1 mb-4 sm:mb-6">
                 "{client.testimonial}"
               </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-semibold text-sm">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary font-semibold text-xs sm:text-sm">
                     {client.initials}
                   </span>
                 </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">
+                <div className="min-w-0">
+                  <p className="font-semibold text-foreground text-xs sm:text-sm truncate">
                     {client.name}
                   </p>
-                  <p className="text-muted-foreground text-xs">
+                  <p className="text-muted-foreground text-[10px] sm:text-xs truncate">
                     {client.role}, {client.company}
                   </p>
                 </div>
