@@ -146,11 +146,11 @@ const ServicePage = () => {
                   
                   <div className="space-y-4 mb-8">
                     <a
-                      href="tel:+5511999999999"
+                      href="tel:+5511999857035"
                       className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Phone className="w-5 h-5" />
-                      <span>(11) 99999-9999</span>
+                      <span>(11) 9 9985-7035</span>
                     </a>
                     <a
                       href="mailto:contato@confidenceeventos.com.br"
