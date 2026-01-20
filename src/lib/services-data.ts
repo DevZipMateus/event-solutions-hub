@@ -93,16 +93,20 @@ Garanta o sucesso do seu evento corporativo em São Paulo com nossa equipe de bo
     icon: Package,
     title: "Carregadores para Eventos",
     slug: "carregadores",
-    description: "Equipe de carregadores para montagem e desmontagem de eventos.",
+    description: "Movimentação segura e eficiente para o seu evento.",
     image: carregadoresImg,
-    fullDescription: "Nossa equipe de carregadores é especializada em montagem e desmontagem de estruturas para eventos. Trabalhamos com agilidade e cuidado para garantir que tudo esteja pronto no prazo.",
+    fullDescription: `Contamos com equipes de carregadores experientes para auxiliar na montagem, operação e desmontagem, seguindo protocolos de segurança e cronogramas definidos.
+
+Realizamos movimentação de estruturas, mobiliários e materiais promocionais com organização e cuidado, garantindo fluidez na logística do evento.
+
+Nossa atuação é coordenada com fornecedores e produção, reduzindo riscos e atrasos, e proporcionando uma operação ágil e eficiente.`,
     features: [
       "Montagem de estruturas",
       "Desmontagem pós-evento",
       "Transporte de materiais",
-      "Organização de espaços",
-      "Movimentação de equipamentos",
-      "Equipe experiente",
+      "Movimentação de mobiliários",
+      "Logística coordenada",
+      "Equipe experiente e uniformizada",
     ],
     gallery: [
       "/carregadores/_WIL7435.JPG",
