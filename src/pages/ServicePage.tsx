@@ -123,12 +123,12 @@ const ServicePage = () => {
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                          className="aspect-square overflow-hidden rounded-xl"
+                          className="overflow-hidden rounded-xl bg-muted flex items-center justify-center"
                         >
                           <img
                             src={image}
                             alt={`${service.title} - Foto ${index + 1}`}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300"
                           />
                         </motion.div>
                       ))}
