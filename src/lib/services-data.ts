@@ -15,8 +15,8 @@ import limpezaImg from "@/assets/hero-limpeza.jpg";
 import bombeirosImg from "@/assets/hero-bombeiros.jpg"; // updated
 import carregadoresImg from "@/assets/hero-carregadores.jpg";
 import tradutoresImg from "@/assets/services/tradutores.jpg";
-import recepcionistasImg from "@/assets/services/recepcionistas.jpg";
-import segurancasImg from "@/assets/services/segurancas.jpg";
+import recepcionistasImg from "@/assets/hero-recepcionistas.jpg";
+import segurancasImg from "@/assets/hero-seguranca.jpg";
 import buffetImg from "@/assets/services/buffet.jpg";
 import staffImg from "@/assets/services/staff.jpg";
 import locacoesImg from "@/assets/services/locacoes.jpg";
