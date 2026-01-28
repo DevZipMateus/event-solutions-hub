@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import heroBombeiros from "@/assets/hero-bombeiros.jpg";
-import heroLimpeza from "@/assets/hero-limpeza.jpg";
-import heroStaff from "@/assets/hero-staff.jpg";
+import heroCarregadores from "@/assets/hero-carregadores.jpg";
+import heroEquipe from "@/assets/hero-equipe.jpg";
 import heroRecepcionistas from "@/assets/hero-recepcionistas.jpg";
 import heroSeguranca from "@/assets/hero-seguranca.jpg";
 
@@ -17,12 +17,12 @@ const HeroCarousel = () => {
       subtitle: "Segurança e prevenção para seus eventos com profissionais qualificados",
     },
     {
-      image: heroStaff,
+      image: heroCarregadores,
       title: "Carregadores",
       subtitle: "Equipe completa para suporte operacional do seu evento",
     },
     {
-      image: heroLimpeza,
+      image: heroEquipe,
       title: "Limpeza",
       subtitle: "Profissionais dedicados para manter seu evento impecável",
     },
