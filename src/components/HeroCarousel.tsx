@@ -69,20 +69,12 @@ const HeroCarousel = () => {
           className="absolute inset-0"
         >
           <div
-            className="absolute inset-0 bg-cover bg-center sm:bg-center md:bg-[center_top] lg:bg-center"
+            className="absolute inset-0"
             style={{ 
               backgroundImage: `url(${slides[currentSlide].image})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center 20%'
+              backgroundPosition: 'center top'
             }}
-          />
-          {/* Fallback img for better mobile rendering */}
-          <img 
-            src={slides[currentSlide].image} 
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover object-[center_20%] sm:object-center"
-            style={{ display: 'none' }}
-            aria-hidden="true"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
         </motion.div>
