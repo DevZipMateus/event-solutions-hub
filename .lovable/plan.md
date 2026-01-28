@@ -1,32 +1,24 @@
 
-# Plano: Corrigir Responsividade de Imagens em Mobile e Todas as Resoluções
 
-## Problema Identificado
-As imagens de background e nas galerias estao ficando mal posicionadas em telas menores (mobile e tablets). O posicionamento atual `center top` nao funciona bem quando a proporcao da tela muda drasticamente.
+# Plano: Corrigir Responsividade de Imagens em Todas as Telas
 
-## Estrategia de Solucao
-Implementar posicionamento responsivo que:
-- Em mobile: centraliza verticalmente a parte importante da imagem (aproximadamente 30% do topo)
-- Em tablet: ajusta para 25% do topo
-- Em desktop: mantem 20-25% do topo
+## Problema Atual
+Os arquivos ainda estao com `backgroundPosition: 'center top'` e `object-top` fixos, que nao se adaptam bem a diferentes proporcoes de tela. Em mobile, as imagens ficam mal enquadradas.
 
-A chave e usar posicoes responsivas via CSS que se adaptam ao viewport.
+## Solucao
+Implementar posicionamento responsivo usando classes Tailwind com breakpoints:
+- Mobile: `center 30%` (foco um pouco abaixo do topo)
+- Tablet: `center 25%`
+- Desktop: `center 20%`
+- Desktop grande: `center 15%` (apenas Hero)
 
 ---
 
-## Componentes a Serem Alterados
+## Alteracoes por Arquivo
 
-### 1. HeroCarousel.tsx
+### 1. HeroCarousel.tsx (linhas 71-78)
 
-**Problema atual:** `backgroundPosition: 'center top'` fixo para todas as telas.
-
-**Solucao:** Usar classes CSS responsivas em vez de inline style para o posicionamento, permitindo diferentes valores por breakpoint.
-
-Alteracoes:
-- Adicionar classe responsiva para o container da imagem
-- Usar Tailwind com valores customizados por breakpoint
-
-Codigo antes:
+De:
 ```tsx
 <div
   className="absolute inset-0"
@@ -38,7 +30,7 @@ Codigo antes:
 />
 ```
 
-Codigo depois:
+Para:
 ```tsx
 <div
   className="absolute inset-0 bg-cover bg-[center_30%] sm:bg-[center_25%] md:bg-[center_20%] lg:bg-[center_15%]"
@@ -50,13 +42,9 @@ Codigo depois:
 
 ---
 
-### 2. BannerSection.tsx
+### 2. BannerSection.tsx (linhas 7-13)
 
-**Problema atual:** `backgroundPosition: 'center top'` fixo.
-
-**Solucao:** Aplicar mesma logica responsiva.
-
-Codigo antes:
+De:
 ```tsx
 <div
   className="absolute inset-0 bg-cover md:bg-fixed"
@@ -67,7 +55,7 @@ Codigo antes:
 />
 ```
 
-Codigo depois:
+Para:
 ```tsx
 <div
   className="absolute inset-0 bg-cover md:bg-fixed bg-[center_30%] sm:bg-[center_25%] md:bg-[center_20%]"
@@ -81,16 +69,12 @@ Codigo depois:
 
 ### 3. CasesCarousel.tsx (linha 124)
 
-**Problema atual:** `object-top` fixo para todas as telas.
-
-**Solucao:** Usar posicionamento responsivo com Tailwind.
-
-Codigo antes:
+De:
 ```tsx
 className="w-full h-full object-cover object-top"
 ```
 
-Codigo depois:
+Para:
 ```tsx
 className="w-full h-full object-cover object-[center_30%] sm:object-[center_25%] md:object-[center_20%]"
 ```
@@ -101,56 +85,43 @@ className="w-full h-full object-cover object-[center_30%] sm:object-[center_25%]
 
 **Linha 55 (imagem principal):**
 
-Codigo antes:
+De:
 ```tsx
 className="max-w-full max-h-[500px] w-auto h-auto object-contain object-top"
 ```
 
-Codigo depois:
+Para:
 ```tsx
 className="max-w-full max-h-[500px] w-auto h-auto object-contain object-[center_30%] sm:object-[center_25%] md:object-[center_20%]"
 ```
 
-**Linha 115 (thumbnails):**
+**Linha 115 (miniaturas):**
 
-Codigo antes:
+De:
 ```tsx
 className="w-full h-full object-cover object-top"
 ```
 
-Codigo depois:
+Para:
 ```tsx
 className="w-full h-full object-cover object-[center_30%] sm:object-[center_25%] md:object-[center_20%]"
 ```
 
 ---
 
-## Resumo das Alteracoes
+## Resumo
 
-| Componente | Arquivo | Antes | Depois |
-|------------|---------|-------|--------|
-| HeroCarousel | linha 71-77 | backgroundPosition inline 'center top' | Classes Tailwind responsivas bg-[center_30%] sm:bg-[center_25%] md:bg-[center_20%] lg:bg-[center_15%] |
-| BannerSection | linha 7-12 | backgroundPosition inline 'center top' | Classes Tailwind responsivas bg-[center_30%] sm:bg-[center_25%] md:bg-[center_20%] |
-| CasesCarousel | linha 124 | object-top | object-[center_30%] sm:object-[center_25%] md:object-[center_20%] |
-| ServiceGalleryCarousel | linha 55 | object-top | object-[center_30%] sm:object-[center_25%] md:object-[center_20%] |
-| ServiceGalleryCarousel | linha 115 | object-top | object-[center_30%] sm:object-[center_25%] md:object-[center_20%] |
-
----
-
-## Por que Esta Abordagem Funciona
-
-1. **Mobile (< 640px):** `center 30%` - posiciona o foco um pouco mais abaixo do topo absoluto, melhor para telas altas e estreitas
-2. **Tablet (640px-767px):** `center 25%` - ajuste intermediario
-3. **Tablet/Desktop (768px+):** `center 20%` - mais proximo do topo pois a proporcao e mais proxima da imagem original
-4. **Desktop grande (1024px+):** `center 15%` (apenas Hero) - ainda mais proximo do topo
-
-Esta abordagem garante que as partes principais das imagens (rostos, elementos importantes) fiquem sempre visiveis independente da resolucao.
-
----
+| Arquivo | Linha | Antes | Depois |
+|---------|-------|-------|--------|
+| HeroCarousel.tsx | 71-78 | `backgroundPosition: 'center top'` inline | Classes responsivas `bg-[center_30%]` ate `lg:bg-[center_15%]` |
+| BannerSection.tsx | 7-13 | `backgroundPosition: 'center top'` inline | Classes responsivas `bg-[center_30%]` ate `md:bg-[center_20%]` |
+| CasesCarousel.tsx | 124 | `object-top` | `object-[center_30%] sm:object-[center_25%] md:object-[center_20%]` |
+| ServiceGalleryCarousel.tsx | 55 | `object-top` | `object-[center_30%] sm:object-[center_25%] md:object-[center_20%]` |
+| ServiceGalleryCarousel.tsx | 115 | `object-top` | `object-[center_30%] sm:object-[center_25%] md:object-[center_20%]` |
 
 ## Resultado Esperado
-
-- Todas as imagens terao enquadramento adequado em mobile, tablet e desktop
-- Rostos e elementos importantes visiveis em todas as resolucoes
-- Transicao suave de posicionamento entre breakpoints
+- Imagens com enquadramento adequado em mobile, tablet e desktop
+- Rostos e elementos importantes sempre visiveis
+- Transicao suave entre breakpoints
 - Comportamento consistente em todo o site
+
