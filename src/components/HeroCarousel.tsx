@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import heroBombeiros from "@/assets/hero-bombeiros.jpg"; // updated
 import heroCarregadores from "@/assets/hero-carregadores.jpg";
-import heroEquipe from "@/assets/hero-equipe.jpg";
+import heroLimpeza from "@/assets/hero-limpeza.jpg";
 import heroRecepcionistas from "@/assets/hero-recepcionistas.jpg";
 import heroSeguranca from "@/assets/hero-seguranca.jpg";
 
@@ -22,7 +22,7 @@ const HeroCarousel = () => {
       subtitle: "Equipe completa para suporte operacional do seu evento",
     },
     {
-      image: heroEquipe,
+      image: heroLimpeza,
       title: "Limpeza",
       subtitle: "Profissionais dedicados para manter seu evento impecável",
     },
