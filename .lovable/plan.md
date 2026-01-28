@@ -1,127 +1,71 @@
 
+# Plano: URLs Diretas para Páginas de Serviços
 
-# Plano: Corrigir Responsividade de Imagens em Todas as Telas
+## Objetivo
+Alterar a estrutura de URLs de `/servicos/nome-servico` para `/nome-servico-para-eventos` (URLs mais limpas e amigáveis para SEO).
 
-## Problema Atual
-Os arquivos ainda estao com `backgroundPosition: 'center top'` e `object-top` fixos, que nao se adaptam bem a diferentes proporcoes de tela. Em mobile, as imagens ficam mal enquadradas.
+## Mudanças Necessárias
 
-## Solucao
-Implementar posicionamento responsivo usando classes Tailwind com breakpoints:
-- Mobile: `center 30%` (foco um pouco abaixo do topo)
-- Tablet: `center 25%`
-- Desktop: `center 20%`
-- Desktop grande: `center 15%` (apenas Hero)
+### 1. Atualizar Slugs dos Serviços (`src/lib/services-data.ts`)
 
----
+Alterar cada slug para incluir "-para-eventos":
 
-## Alteracoes por Arquivo
+| Serviço | Slug Atual | Novo Slug |
+|---------|------------|-----------|
+| Limpeza para Eventos | `limpeza` | `limpeza-para-eventos` |
+| Bombeiro Civil | `bombeiros` | `bombeiro-civil-para-eventos` |
+| Carregadores | `carregadores` | `carregadores-para-eventos` |
+| Tradutores | `tradutores` | `tradutores-para-eventos` |
+| Recepcionista | `recepcionistas` | `recepcionista-para-eventos` |
+| Seguranças | `segurancas` | `seguranca-para-eventos` |
+| Garçons | `buffet` | `garcons-para-eventos` |
+| Staff | `staff` | `staff-para-eventos` |
+| Locações | `locacoes` | `locacoes-para-eventos` |
 
-### 1. HeroCarousel.tsx (linhas 71-78)
+### 2. Atualizar Rota Principal (`src/App.tsx`)
 
-De:
-```tsx
-<div
-  className="absolute inset-0"
-  style={{ 
-    backgroundImage: `url(${slides[currentSlide].image})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center top'
-  }}
-/>
+```text
+Antes: <Route path="/servicos/:slug" element={<ServicePage />} />
+Depois: <Route path="/:slug" element={<ServicePage />} />
 ```
 
-Para:
-```tsx
-<div
-  className="absolute inset-0 bg-cover bg-[center_30%] sm:bg-[center_25%] md:bg-[center_20%] lg:bg-[center_15%]"
-  style={{ 
-    backgroundImage: `url(${slides[currentSlide].image})`
-  }}
-/>
+### 3. Atualizar Links no Header (`src/components/Header.tsx`)
+
+```text
+Antes: navigate(`/servicos/${slug}`)
+Depois: navigate(`/${slug}`)
 ```
 
----
+### 4. Atualizar Links na Seção de Serviços (`src/components/ServicesSection.tsx`)
 
-### 2. BannerSection.tsx (linhas 7-13)
-
-De:
-```tsx
-<div
-  className="absolute inset-0 bg-cover md:bg-fixed"
-  style={{ 
-    backgroundImage: `url(${bannerImage})`,
-    backgroundPosition: 'center top'
-  }}
-/>
+```text
+Antes: to={`/servicos/${service.slug}`}
+Depois: to={`/${service.slug}`}
 ```
 
-Para:
-```tsx
-<div
-  className="absolute inset-0 bg-cover md:bg-fixed bg-[center_30%] sm:bg-[center_25%] md:bg-[center_20%]"
-  style={{ 
-    backgroundImage: `url(${bannerImage})`
-  }}
-/>
+### 5. Atualizar Links na Página de Serviço (`src/pages/ServicePage.tsx`)
+
+- Link de "Outros Serviços" na sidebar
+```text
+Antes: to={`/servicos/${relatedService.slug}`}
+Depois: to={`/${relatedService.slug}`}
 ```
 
----
+## Resultado Final
 
-### 3. CasesCarousel.tsx (linha 124)
+As URLs ficarão assim:
+- `https://seusite.com/limpeza-para-eventos`
+- `https://seusite.com/seguranca-para-eventos`
+- `https://seusite.com/recepcionista-para-eventos`
+- etc.
 
-De:
-```tsx
-className="w-full h-full object-cover object-top"
-```
+## Detalhes Técnicos
 
-Para:
-```tsx
-className="w-full h-full object-cover object-[center_30%] sm:object-[center_25%] md:object-[center_20%]"
-```
+**Arquivos a modificar:**
+1. `src/lib/services-data.ts` - 9 alterações de slug
+2. `src/App.tsx` - 1 alteração de rota
+3. `src/components/Header.tsx` - 1 alteração de navegação
+4. `src/components/ServicesSection.tsx` - 1 alteração de Link
+5. `src/pages/ServicePage.tsx` - 1 alteração de Link
 
----
-
-### 4. ServiceGalleryCarousel.tsx
-
-**Linha 55 (imagem principal):**
-
-De:
-```tsx
-className="max-w-full max-h-[500px] w-auto h-auto object-contain object-top"
-```
-
-Para:
-```tsx
-className="max-w-full max-h-[500px] w-auto h-auto object-contain object-[center_30%] sm:object-[center_25%] md:object-[center_20%]"
-```
-
-**Linha 115 (miniaturas):**
-
-De:
-```tsx
-className="w-full h-full object-cover object-top"
-```
-
-Para:
-```tsx
-className="w-full h-full object-cover object-[center_30%] sm:object-[center_25%] md:object-[center_20%]"
-```
-
----
-
-## Resumo
-
-| Arquivo | Linha | Antes | Depois |
-|---------|-------|-------|--------|
-| HeroCarousel.tsx | 71-78 | `backgroundPosition: 'center top'` inline | Classes responsivas `bg-[center_30%]` ate `lg:bg-[center_15%]` |
-| BannerSection.tsx | 7-13 | `backgroundPosition: 'center top'` inline | Classes responsivas `bg-[center_30%]` ate `md:bg-[center_20%]` |
-| CasesCarousel.tsx | 124 | `object-top` | `object-[center_30%] sm:object-[center_25%] md:object-[center_20%]` |
-| ServiceGalleryCarousel.tsx | 55 | `object-top` | `object-[center_30%] sm:object-[center_25%] md:object-[center_20%]` |
-| ServiceGalleryCarousel.tsx | 115 | `object-top` | `object-[center_30%] sm:object-[center_25%] md:object-[center_20%]` |
-
-## Resultado Esperado
-- Imagens com enquadramento adequado em mobile, tablet e desktop
-- Rostos e elementos importantes sempre visiveis
-- Transicao suave entre breakpoints
-- Comportamento consistente em todo o site
-
+**Nota importante:** A rota `/:slug` será posicionada antes da rota catch-all `*` para garantir que os serviços sejam encontrados corretamente. O componente `ServicePage` já possui tratamento para slugs não encontrados, redirecionando para uma mensagem de erro.
