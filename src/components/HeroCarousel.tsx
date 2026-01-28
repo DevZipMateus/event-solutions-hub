@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import heroBombeiros from "@/assets/hero-bombeiros.jpg";
+import heroBombeiros from "@/assets/hero-bombeiros.jpg"; // updated
 import heroCarregadores from "@/assets/hero-carregadores.jpg";
 import heroEquipe from "@/assets/hero-equipe.jpg";
 import heroRecepcionistas from "@/assets/hero-recepcionistas.jpg";
