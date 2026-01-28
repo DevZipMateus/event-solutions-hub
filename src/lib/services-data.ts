@@ -11,7 +11,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 
-import limpezaImg from "@/assets/services/limpeza.jpg";
+import limpezaImg from "@/assets/hero-limpeza.jpg";
 import bombeirosImg from "@/assets/hero-bombeiros.jpg";
 import carregadoresImg from "@/assets/services/carregadores.jpg";
 import tradutoresImg from "@/assets/services/tradutores.jpg";
