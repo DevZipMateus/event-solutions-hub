@@ -92,7 +92,7 @@ const ServicesSection = () => {
                 variants={itemVariants}
               >
                 <Link
-                  to={`/servicos/${service.slug}`}
+                  to={`/${service.slug}`}
                   className="group block bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30"
                 >
                   <div className="relative w-full h-40 sm:h-44 md:h-48 overflow-hidden">

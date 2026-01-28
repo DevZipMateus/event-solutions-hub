@@ -189,7 +189,7 @@ const ServicePage = () => {
                     {otherServices.map((relatedService) => (
                       <Link
                         key={relatedService.slug}
-                        to={`/servicos/${relatedService.slug}`}
+                        to={`/${relatedService.slug}`}
                         className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 bg-muted rounded-lg hover:bg-muted/80 transition-colors group"
                       >
                         <relatedService.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />

@@ -36,7 +36,7 @@ export const services: Service[] = [
   {
     icon: Sparkles,
     title: "Limpeza para Eventos",
-    slug: "limpeza",
+    slug: "limpeza-para-eventos",
     description: "Ambientes impecáveis antes, durante e pós-evento.",
     image: limpezaImg,
     fullDescription: `A limpeza para eventos é um fator crucial para o sucesso de qualquer evento corporativo em São Paulo. Nossa equipe especializada garante ambientes impecáveis antes, durante e após a realização do seu projeto, assegurando o conforto e a segurança sanitária de todos os participantes. Atuamos com discrição e eficiência, realizando a higienização de áreas comuns, banheiros, praças de alimentação e estandes.
@@ -64,7 +64,7 @@ Seja um congresso, feira, workshop ou confraternização, conte com nossa excel�
   {
     icon: Flame,
     title: "Bombeiro Civil para Eventos",
-    slug: "bombeiros",
+    slug: "bombeiro-civil-para-eventos",
     description: "Prevenção, protocolos e resposta rápida.",
     image: bombeirosImg,
     fullDescription: `A segurança é prioridade absoluta em qualquer evento corporativo em São Paulo. Nossa equipe de Bombeiro Civil atua na prevenção e combate a incêndios, primeiros socorros e gestão de riscos, garantindo a tranquilidade de organizadores e convidados. Seguimos rigorosamente as normas técnicas e legislações vigentes para assegurar que seu evento esteja em total conformidade.
@@ -92,7 +92,7 @@ Garanta o sucesso do seu evento corporativo em São Paulo com nossa equipe de bo
   {
     icon: Package,
     title: "Carregadores para Eventos",
-    slug: "carregadores",
+    slug: "carregadores-para-eventos",
     description: "Movimentação segura e eficiente para o seu evento.",
     image: carregadoresImg,
     fullDescription: `Contamos com equipes de carregadores experientes para auxiliar na montagem, operação e desmontagem, seguindo protocolos de segurança e cronogramas definidos.
@@ -117,7 +117,7 @@ Nossa atuação é coordenada com fornecedores e produção, reduzindo riscos e 
   {
     icon: Languages,
     title: "Tradutores para Eventos",
-    slug: "tradutores",
+    slug: "tradutores-para-eventos",
     description: "Apoio bilíngue e tradução simultânea.",
     image: tradutoresImg,
     fullDescription: `Oferecemos tradutores e intérpretes para recepção de convidados internacionais, tradução simultânea em palestras e suporte em múltiplos idiomas.
@@ -138,7 +138,7 @@ Ideal para congressos, feiras e eventos corporativos com conteúdo internacional
   {
     icon: UserCheck,
     title: "Recepcionista para Eventos",
-    slug: "recepcionistas",
+    slug: "recepcionista-para-eventos",
     description: "A primeira impressão é a que fica.",
     image: recepcionistasImg,
     fullDescription: `Nossas Recepcionistas para Eventos, sejam elas bilíngues ou monolíngues, são colaboradoras especializadas e meticulosamente treinadas para prestar um acolhimento de excelência, assegurando organização rigorosa, fluidez operacional e uma recepção calorosa aos participantes. Elas se dedicam ao credenciamento estratégico, à boas-vindas aos convidados, à orientação detalhada sobre o cronograma e logística, à gestão de acessos e ao suporte integral, sempre com cordialidade, prontidão e a devida postura profissional.
@@ -166,7 +166,7 @@ Abrangendo feiras, congressos, lançamentos, eventos corporativos ou celebraçõ
   {
     icon: Shield,
     title: "Seguranças para Eventos",
-    slug: "segurancas",
+    slug: "seguranca-para-eventos",
     description: "Proteção e tranquilidade para todos.",
     image: segurancasImg,
     fullDescription: `Nossa equipe de Proteção e Segurança para Eventos é composta por seguranças para evento profissionais altamente qualificados e rigorosamente treinados para assegurar a salvaguarda de participantes, ativos e a fluidez do seu evento. Com uma abordagem estratégica e sutil, eles executam o controle de acesso, vigiam o ambiente, antecipam incidentes e administram prontamente situações de risco, garantindo um evento íntegro e impecavelmente organizado.
@@ -194,7 +194,7 @@ Seja para concertos, exposições, encontros corporativos, celebrações privada
   {
     icon: UtensilsCrossed,
     title: "Garçons para Eventos",
-    slug: "buffet",
+    slug: "garcons-para-eventos",
     description: "Atendimento qualificado em A&B.",
     image: buffetImg,
     fullDescription: `Profissionais treinados para serviço de alimentos e bebidas, postura adequada e eficiência na operação.
@@ -222,7 +222,7 @@ Ideal para coquetéis, jantares, feiras e eventos corporativos que demandam serv
   {
     icon: Users,
     title: "Staff para Eventos",
-    slug: "staff",
+    slug: "staff-para-eventos",
     description: "Apoio operacional e organização.",
     image: staffImg,
     fullDescription: `Equipe de staff para credenciamento, orientação de público, organização de filas e apoio logístico.
@@ -243,7 +243,7 @@ Atuação coordenada com produção e fornecedores para garantir fluxo adequado 
   {
     icon: Building,
     title: "Locações para Eventos",
-    slug: "locacoes",
+    slug: "locacoes-para-eventos",
     description: "Estruturas e equipamentos com logística completa.",
     image: locacoesImg,
     fullDescription: `Fornecemos tendas, banheiros químicos, ambulâncias, mobiliários, equipamentos e demais soluções para estruturação do seu evento.

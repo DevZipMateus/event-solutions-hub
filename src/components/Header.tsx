@@ -39,7 +39,7 @@ const Header = () => {
   const handleServiceClick = (slug: string) => {
     setIsMobileMenuOpen(false);
     setIsServicesOpen(false);
-    navigate(`/servicos/${slug}`);
+    navigate(`/${slug}`);
   };
 
   return (
