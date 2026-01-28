@@ -94,7 +94,7 @@ const ServicesSection = () => {
                   to={`/servicos/${service.slug}`}
                   className="group block bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30"
                 >
-                  <div className="relative w-full h-32 sm:h-36 md:h-40 overflow-hidden">
+                  <div className="relative w-full h-40 sm:h-44 md:h-48 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
