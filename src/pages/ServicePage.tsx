@@ -47,7 +47,7 @@ const ServicePage = () => {
       {/* Hero Section with Parallax */}
       <section 
         ref={heroRef}
-        className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] min-h-[280px] overflow-hidden"
+        className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] min-h-[280px] overflow-hidden mt-16 sm:mt-20"
       >
         <motion.div 
           className="absolute inset-0 w-full h-[120%]"
