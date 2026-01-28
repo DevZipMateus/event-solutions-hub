@@ -44,7 +44,7 @@ const ServicePage = () => {
         <img
           src={withDevCacheBuster(service.image)}
           alt={service.title}
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-[center_25%]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-end pb-8 sm:pb-10 md:pb-12">
