@@ -27,6 +27,7 @@ export interface Service {
   slug: string;
   description: string;
   image: string;
+  imageFocalPoint?: string; // CSS object-position value, e.g., "center 70%"
   fullDescription: string;
   features: string[];
   gallery: string[];
@@ -141,6 +142,7 @@ Ideal para congressos, feiras e eventos corporativos com conteúdo internacional
     slug: "recepcionista-para-eventos",
     description: "A primeira impressão é a que fica.",
     image: recepcionistasImg,
+    imageFocalPoint: "center 75%",
     fullDescription: `Nossas Recepcionistas para Eventos, sejam elas bilíngues ou monolíngues, são colaboradoras especializadas e meticulosamente treinadas para prestar um acolhimento de excelência, assegurando organização rigorosa, fluidez operacional e uma recepção calorosa aos participantes. Elas se dedicam ao credenciamento estratégico, à boas-vindas aos convidados, à orientação detalhada sobre o cronograma e logística, à gestão de acessos e ao suporte integral, sempre com cordialidade, prontidão e a devida postura profissional.
 
 Para encontros nacionais e internacionais, nossas recepcionistas bilíngues garantem uma interlocução eficaz com os visitantes estrangeiros, proporcionando uma vivência acessível e de elevado padrão. Adicionalmente, cada Recepcionista para Evento é capacitada a interagir com diversos perfis de público, mantendo um nível de serviço superior e projetando a melhor imagem da sua instituição ou marca.
