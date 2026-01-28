@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ServiceGalleryCarousel from "@/components/ServiceGalleryCarousel";
 import { Button } from "@/components/ui/button";
+import { withDevCacheBuster } from "@/lib/withDevCacheBuster";
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -41,7 +42,7 @@ const ServicePage = () => {
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] min-h-[280px] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={service.image}
+            src={withDevCacheBuster(service.image)}
             alt={service.title}
             className="w-full h-full object-cover"
           />
