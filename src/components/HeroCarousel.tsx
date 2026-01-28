@@ -6,6 +6,7 @@ import heroCarregadores from "@/assets/hero-carregadores.jpg";
 import heroLimpeza from "@/assets/hero-limpeza.jpg";
 import heroRecepcionistas from "@/assets/hero-recepcionistas.jpg";
 import heroSeguranca from "@/assets/hero-seguranca.jpg";
+import { withDevCacheBuster } from "@/lib/withDevCacheBuster";
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -70,7 +71,7 @@ const HeroCarousel = () => {
           <div
             className="absolute inset-0"
             style={{ 
-              backgroundImage: `url(${slides[currentSlide].image})`,
+              backgroundImage: `url(${withDevCacheBuster(slides[currentSlide].image)})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center top'
             }}

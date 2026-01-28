@@ -8,6 +8,10 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    // Prevent stale bundles/assets in preview environments that sit behind caching layers.
+    headers: {
+      "Cache-Control": "no-store",
+    },
     hmr: {
       overlay: false,
     },

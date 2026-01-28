@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { services } from "@/lib/services-data";
 import servicesPerson from "@/assets/services-person.png";
+import { withDevCacheBuster } from "@/lib/withDevCacheBuster";
 
 const ServicesSection = () => {
   const containerVariants = {
@@ -96,7 +97,7 @@ const ServicesSection = () => {
                 >
                   <div className="relative w-full h-40 sm:h-44 md:h-48 overflow-hidden">
                     <img
-                      src={service.image}
+                      src={withDevCacheBuster(service.image)}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />

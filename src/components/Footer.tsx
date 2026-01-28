@@ -1,9 +1,19 @@
 import { MapPin, Mail, Phone } from "lucide-react";
+import { forwardRef, type ComponentPropsWithoutRef } from "react";
 import logo from "@/assets/logo_confidence.png";
+import { cn } from "@/lib/utils";
 
-const Footer = () => {
+const Footer = forwardRef<HTMLElement, ComponentPropsWithoutRef<"footer">>(
+  ({ className, ...props }, ref) => {
   return (
-    <footer className="bg-primary py-10 sm:py-12 md:py-16 overflow-hidden">
+    <footer
+      ref={ref}
+      {...props}
+      className={cn(
+        "bg-primary py-10 sm:py-12 md:py-16 overflow-hidden",
+        className
+      )}
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-start">
           {/* Logo */}
@@ -76,6 +86,8 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = "Footer";
 
 export default Footer;
