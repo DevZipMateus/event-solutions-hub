@@ -52,7 +52,7 @@ const ServiceGalleryCarousel = ({ images, title }: ServiceGalleryCarouselProps) 
             <img
               src={image}
               alt={`${title} - Foto ${index + 1}`}
-              className="max-w-full max-h-[500px] w-auto h-auto object-contain"
+              className="max-w-full max-h-[500px] w-auto h-auto object-contain object-top"
             />
           </motion.div>
         ))}
@@ -112,7 +112,7 @@ const ServiceGalleryCarousel = ({ images, title }: ServiceGalleryCarouselProps) 
               <img
                 src={image}
                 alt={`${title} - Miniatura ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </button>
           ))}

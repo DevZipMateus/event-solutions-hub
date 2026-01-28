@@ -121,7 +121,7 @@ const CasesCarousel = () => {
                       key={currentCaseImageIndex}
                       src={currentCase.images[currentCaseImageIndex]}
                       alt={`${currentCase.clientName} - Foto ${currentCaseImageIndex + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}

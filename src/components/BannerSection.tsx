@@ -5,8 +5,11 @@ const BannerSection = () => {
   return (
     <section className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center md:bg-fixed"
-        style={{ backgroundImage: `url(${bannerImage})` }}
+        className="absolute inset-0 bg-cover md:bg-fixed"
+        style={{ 
+          backgroundImage: `url(${bannerImage})`,
+          backgroundPosition: 'center top'
+        }}
       />
       <div className="absolute inset-0 bg-primary/60" />
       
