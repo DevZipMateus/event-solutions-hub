@@ -1,7 +1,6 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowLeft, Phone, Mail, MapPin } from "lucide-react";
-import { useRef } from "react";
 import { getServiceBySlug, services } from "@/lib/services-data";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,10 +14,6 @@ const ServicePage = () => {
   const navigate = useNavigate();
   const service = getServiceBySlug(slug || "");
   
-  // Parallax effect setup
-  const heroRef = useRef<HTMLElement>(null);
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 150]);
 
   if (!service) {
     return (
@@ -44,21 +39,13 @@ const ServicePage = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section with Parallax */}
-      <section 
-        ref={heroRef}
-        className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] min-h-[280px] overflow-hidden mt-16 sm:mt-20"
-      >
-        <motion.div 
-          className="absolute inset-0 w-full h-[120%]"
-          style={{ y }}
-        >
-          <img
-            src={withDevCacheBuster(service.image)}
-            alt={service.title}
-            className="w-full h-full object-cover object-top"
-          />
-        </motion.div>
+      {/* Hero Section */}
+      <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] min-h-[280px] overflow-hidden mt-16 sm:mt-20">
+        <img
+          src={withDevCacheBuster(service.image)}
+          alt={service.title}
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-end pb-8 sm:pb-10 md:pb-12">
           <motion.div
