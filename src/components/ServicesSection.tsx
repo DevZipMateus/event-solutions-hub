@@ -57,7 +57,7 @@ const ServicesSection = () => {
             {/* Diamond shape background */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div 
-                className="w-56 xl:w-72 h-56 xl:h-72 bg-primary rotate-45 rounded-2xl xl:rounded-3xl opacity-90 shadow-2xl"
+                className="w-64 xl:w-80 h-64 xl:h-80 bg-primary rotate-45 rounded-2xl xl:rounded-3xl opacity-90 shadow-2xl"
                 style={{
                   background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)/0.7) 100%)'
                 }}
@@ -74,7 +74,7 @@ const ServicesSection = () => {
             <img
               src={servicesPerson}
               alt="Profissional Confidence Eventos"
-              className="relative z-10 max-h-[600px] xl:max-h-[850px] object-contain drop-shadow-2xl"
+              className="relative z-10 max-h-[750px] xl:max-h-[950px] object-contain drop-shadow-2xl"
             />
           </motion.div>
 
