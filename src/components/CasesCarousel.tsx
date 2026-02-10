@@ -43,10 +43,6 @@ const CasesCarousel = () => {
         "/cases/saudosa-maloca-5.jpg",
         "/cases/saudosa-maloca-6.jpg",
         "/cases/saudosa-maloca-7.jpg",
-        "/cases/saudosa-maloca-8.jpg",
-        "/cases/saudosa-maloca-9.jpg",
-        "/cases/saudosa-maloca-10.jpg",
-        "/cases/saudosa-maloca-11.jpg",
       ],
     },
     {
