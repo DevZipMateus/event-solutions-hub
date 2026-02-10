@@ -54,12 +54,9 @@ Seja um congresso, feira, workshop ou confraternização, conte com nossa excel�
       "Equipe uniformizada e treinada",
     ],
     gallery: [
-      "/limpeza/gallery-1.jpg",
-      "/limpeza/gallery-2.jpg",
-      "/limpeza/gallery-3.jpg",
-      "/limpeza/gallery-4.jpg",
-      "/limpeza/gallery-5.jpg",
-      "/limpeza/gallery-6.jpg",
+      "/limpeza/limpeza-gallery-1.jpeg",
+      "/limpeza/limpeza-gallery-2.jpeg",
+      "/limpeza/limpeza-gallery-3.jpeg",
     ],
   },
   {
