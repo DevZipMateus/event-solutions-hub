@@ -225,7 +225,9 @@ Atuação coordenada com produção e fornecedores para garantir fluxo adequado 
       "Comunicação alinhada ao evento",
       "Atuação coordenada com produção",
     ],
-    gallery: [],
+    gallery: [
+      "/staff/staff-gallery-1.jpeg",
+    ],
   },
   {
     icon: Building,
