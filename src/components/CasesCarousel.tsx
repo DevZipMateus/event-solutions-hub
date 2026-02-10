@@ -36,7 +36,6 @@ const CasesCarousel = () => {
       testimonial:
         "Trabalhar com a Confidence Eventos no nosso evento foi uma experiência de total tranquilidade. A qualidade da mão de obra é notável. Desde a segurança, que manteve tudo sob controle com discrição e eficiência, até os carregadores e a equipe de limpeza, que foram incrivelmente ágeis e organizados. Eles são sinônimo de profissionalismo e pontualidade. Agradecemos por tornarem a logística do nosso evento impecável!",
       images: [
-        "/cases/saudosa-maloca-1.jpg",
         "/cases/saudosa-maloca-2.jpg",
         "/cases/saudosa-maloca-3.jpg",
         "/cases/saudosa-maloca-4.jpg",
