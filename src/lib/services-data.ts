@@ -82,12 +82,9 @@ Garanta o sucesso do seu evento corporativo em São Paulo com nossa equipe de bo
       "Atendimento 24 horas",
     ],
     gallery: [
-      "/bombeiro/gallery-1.jpg",
-      "/bombeiro/gallery-2.jpg",
-      "/bombeiro/gallery-3.jpg",
-      "/bombeiro/gallery-4.jpg",
-      "/bombeiro/gallery-5.jpg",
-      "/bombeiro/gallery-6.jpg",
+      "/bombeiros/bombeiros-gallery-1.jpeg",
+      "/bombeiros/bombeiros-gallery-2.jpeg",
+      "/bombeiros/bombeiros-gallery-3.jpg",
     ],
   },
   {
