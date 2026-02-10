@@ -100,6 +100,7 @@ const ServicesSection = () => {
                       src={withDevCacheBuster(service.image)}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      style={{ objectPosition: service.imageFocalPoint || "center 60%" }}
                     />
                   </div>
                   <div className="p-4 sm:p-5">
