@@ -122,13 +122,13 @@ const CasesCarousel = () => {
               >
                 {/* Image Gallery */}
                 <div className="relative order-1">
-                  <div className="relative aspect-[4/4] sm:aspect-[4/6] overflow-hidden rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl">
+                  <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/4] overflow-hidden rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl bg-black/5">
                     <AnimatePresence mode="wait">
                       <motion.img
                         key={currentCaseImageIndex}
                         src={currentCase.images[currentCaseImageIndex]}
                         alt={`${currentCase.clientName} - Foto ${currentCaseImageIndex + 1}`}
-                        className="w-full h-full object-cover object-center cursor-pointer"
+                        className="w-full h-full object-contain sm:object-cover object-center cursor-pointer"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
