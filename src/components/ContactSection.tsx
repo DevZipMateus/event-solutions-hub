@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
+import contactBg from "@/assets/contact-bg.png";
 import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {

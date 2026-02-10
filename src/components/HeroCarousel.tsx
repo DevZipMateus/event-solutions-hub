@@ -1,17 +1,23 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import heroBombeiros from "@/assets/hero-bombeiros.jpg"; // updated
+import heroBombeiros from "@/assets/hero-bombeiros.jpg";
 import heroCarregadores from "@/assets/hero-carregadores.jpg";
 import heroLimpeza from "@/assets/hero-limpeza.jpg";
 import heroRecepcionistas from "@/assets/hero-recepcionistas.jpg";
 import heroSeguranca from "@/assets/hero-seguranca.jpg";
+import heroEscritorio from "@/assets/hero-escritorio.png";
 import { withDevCacheBuster } from "@/lib/withDevCacheBuster";
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
+    {
+      image: heroEscritorio,
+      title: "Confidence Eventos",
+      subtitle: "Soluções completas em mão de obra para eventos corporativos em São Paulo",
+    },
     {
       image: heroBombeiros,
       title: "Bombeiros",
