@@ -52,8 +52,8 @@ const CasesCarousel = () => {
       testimonial:
         "Vocês arrasaram no serviço! Todos muito educados, atenciosos, tudo feito com muita atenção e capricho. Seguranças extremamente educados e solícitos. Limpeza atenciosa e extremamente caprichosa. Bombeiro sempre com atenção, circulando pelo salão. Carregadores 'ponta firma', tudo que pedi eles me ajudaram! Trabalho há mais de 15 anos com evento e é muito difícil encontrar empresa de prestação de serviços-staffs como vocês. Parabéns! Com certeza estaremos juntos novamente em 2026!",
       images: [
-        "/cases/shopping-frei-caneca-1.jpg",
-        "/cases/shopping-frei-caneca-2.jpg",
+        "/cases/shopping-frei-caneca-1.jpg?v=2",
+        "/cases/shopping-frei-caneca-2.jpg?v=2",
       ],
     },
   ];
