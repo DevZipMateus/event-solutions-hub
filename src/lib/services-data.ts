@@ -121,6 +121,7 @@ Nossa atuação é coordenada com fornecedores e produção, reduzindo riscos e 
     slug: "tradutores-para-eventos",
     description: "Apoio bilíngue e tradução simultânea.",
     image: tradutoresImg,
+    imageFocalPoint: "center 20%",
     fullDescription: `Oferecemos tradutores e intérpretes para recepção de convidados internacionais, tradução simultânea em palestras e suporte em múltiplos idiomas.
 
 Equipe preparada para atuar com discrição e eficiência, alinhada à identidade do evento e às necessidades do seu público.
@@ -199,6 +200,7 @@ Seja para concertos, exposições, encontros corporativos, celebrações privada
     slug: "garcons-para-eventos",
     description: "Atendimento qualificado em A&B.",
     image: buffetImg,
+    imageFocalPoint: "center 20%",
     fullDescription: `Profissionais treinados para serviço de alimentos e bebidas, postura adequada e eficiência na operação.
 
 Atendimento ao público com cordialidade, organização de salão e suporte à produção de catering.
