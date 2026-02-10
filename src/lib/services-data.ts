@@ -152,12 +152,7 @@ Abrangendo feiras, congressos, lançamentos, eventos corporativos ou celebraçõ
       "Postura profissional e cordial",
     ],
     gallery: [
-      "/recepcionista/gallery-1.jpg",
-      "/recepcionista/gallery-2.jpg",
-      "/recepcionista/gallery-3.jpg",
-      "/recepcionista/gallery-4.jpg",
-      "/recepcionista/gallery-5.jpg",
-      "/recepcionista/gallery-6.jpg",
+      "/recepcionistas/recepcionistas-gallery-1.jpeg",
     ],
   },
   {
