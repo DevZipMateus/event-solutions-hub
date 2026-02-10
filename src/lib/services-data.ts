@@ -107,9 +107,9 @@ Nossa atuação é coordenada com fornecedores e produção, reduzindo riscos e 
       "Equipe experiente e uniformizada",
     ],
     gallery: [
-      "/carregadores/gallery-1.jpg",
-      "/carregadores/gallery-2.jpg",
-      "/carregadores/gallery-3.jpg",
+      "/carregadores/carregadores-gallery-1.jpeg",
+      "/carregadores/carregadores-gallery-2.jpeg",
+      "/carregadores/carregadores-gallery-3.jpeg",
     ],
   },
   {
