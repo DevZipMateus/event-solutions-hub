@@ -74,7 +74,7 @@ const ServicesSection = () => {
             <img
               src={servicesPerson}
               alt="Profissional Confidence Eventos"
-              className="relative z-10 max-h-[935px] xl:max-h-[1155px] object-contain drop-shadow-2xl"
+              className="relative z-10 w-full object-contain drop-shadow-2xl scale-110 xl:scale-125"
             />
           </motion.div>
 
