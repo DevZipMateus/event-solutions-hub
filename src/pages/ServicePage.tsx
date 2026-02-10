@@ -154,11 +154,11 @@ const ServicePage = () => {
                       <span>(11) 9 9985-7035</span>
                     </a>
                     <a
-                      href="mailto:comercial@confidenceeventos.com.br"
+                      href="mailto:faleconosco@confidenceeventos.com.br"
                       className="flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm"
                     >
                       <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                      <span className="break-all">comercial@confidenceeventos.com.br</span>
+                      <span className="break-all">faleconosco@confidenceeventos.com.br</span>
                     </a>
                     <div className="flex items-center gap-2 sm:gap-3 text-muted-foreground text-sm sm:text-base">
                       <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />

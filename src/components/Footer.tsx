@@ -48,10 +48,10 @@ const Footer = forwardRef<HTMLElement, ComponentPropsWithoutRef<"footer">>(
               <div className="flex items-center gap-2 sm:gap-3 justify-center md:justify-end">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 md:order-2" />
                 <a
-                  href="mailto:comercial@confidenceeventos.com.br"
+                  href="mailto:faleconosco@confidenceeventos.com.br"
                   className="text-white/80 hover:text-white transition-colors duration-300 text-xs sm:text-sm md:text-base break-all"
                 >
-                  comercial@confidenceeventos.com.br
+                  faleconosco@confidenceeventos.com.br
                 </a>
               </div>
 
@@ -61,7 +61,7 @@ const Footer = forwardRef<HTMLElement, ComponentPropsWithoutRef<"footer">>(
                   href="tel:+551123641135"
                   className="text-white/80 hover:text-white transition-colors duration-300 text-sm sm:text-base"
                 >
-                  +55 (11) 2364-1135
+                  +55 (11) 2364-1135 (Fixo)
                 </a>
               </div>
 
@@ -71,7 +71,7 @@ const Footer = forwardRef<HTMLElement, ComponentPropsWithoutRef<"footer">>(
                   href="tel:+5511999857035"
                   className="text-white/80 hover:text-white transition-colors duration-300 text-sm sm:text-base"
                 >
-                  +55 (11) 9 9985-7035
+                  +55 (11) 9 9985-7035 (WhatsApp)
                 </a>
               </div>
             </div>

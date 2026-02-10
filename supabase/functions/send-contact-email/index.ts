@@ -69,7 +69,7 @@ serve(async (req: Request) => {
       },
     });
 
-    const toAddress = destinatario || "comercial@confidenceeventos.com.br";
+    const toAddress = destinatario || "faleconosco@confidenceeventos.com.br";
     console.log("Sending email to:", toAddress);
 
     const html = `
