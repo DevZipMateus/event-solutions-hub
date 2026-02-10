@@ -212,12 +212,8 @@ Ideal para coquetéis, jantares, feiras e eventos corporativos que demandam serv
       "Uniformizados",
     ],
     gallery: [
-      "/buffet/gallery-1.jpg",
-      "/buffet/gallery-2.jpg",
-      "/buffet/gallery-3.jpg",
-      "/buffet/gallery-4.jpg",
-      "/buffet/gallery-5.jpg",
-      "/buffet/gallery-6.jpg",
+      "/garcons/garcons-gallery-1.jpeg",
+      "/garcons/garcons-gallery-2.jpeg",
     ],
   },
   {
