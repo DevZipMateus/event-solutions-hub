@@ -175,12 +175,10 @@ Seja para concertos, exposições, encontros corporativos, celebrações privada
       "Conduta profissional impecável",
     ],
     gallery: [
-      "/seguranças/gallery-1.jpg",
-      "/seguranças/gallery-2.jpg",
-      "/seguranças/gallery-3.jpg",
-      "/seguranças/gallery-4.jpg",
-      "/seguranças/gallery-5.jpg",
-      "/seguranças/gallery-6.jpg",
+      "/segurancas/segurancas-gallery-1.jpeg",
+      "/segurancas/segurancas-gallery-2.jpeg",
+      "/segurancas/segurancas-gallery-3.png",
+      "/segurancas/segurancas-gallery-4.jpeg",
     ],
   },
   {
