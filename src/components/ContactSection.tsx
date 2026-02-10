@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
+import contactBg from "@/assets/contact-bg.png";
 import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
@@ -91,8 +92,12 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="contato" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-background overflow-hidden relative">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-10"
+        style={{ backgroundImage: `url(${contactBg})` }}
+      />
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center">
           {/* Left Side - Text */}
           <motion.div
