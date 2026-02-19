@@ -115,7 +115,7 @@ Nossa atuação é coordenada com fornecedores e produção, reduzindo riscos e 
     slug: "tradutores-para-eventos",
     description: "Apoio bilíngue e tradução simultânea.",
     image: tradutoresImg,
-    imageFocalPoint: "center 20%",
+    imageFocalPoint: "center 10%",
     fullDescription: `Oferecemos tradutores e intérpretes para recepção de convidados internacionais, tradução simultânea em palestras e suporte em múltiplos idiomas.
 
 Equipe preparada para atuar com discrição e eficiência, alinhada à identidade do evento e às necessidades do seu público.
@@ -137,7 +137,7 @@ Ideal para congressos, feiras e eventos corporativos com conteúdo internacional
     slug: "recepcionista-para-eventos",
     description: "A primeira impressão é a que fica.",
     image: recepcionistasImg,
-    imageFocalPoint: "center 20%",
+    imageFocalPoint: "center 10%",
     fullDescription: `Nossas Recepcionistas para Eventos, sejam elas bilíngues ou monolíngues, são colaboradoras especializadas e meticulosamente treinadas para prestar um acolhimento de excelência, assegurando organização rigorosa, fluidez operacional e uma recepção calorosa aos participantes. Elas se dedicam ao credenciamento estratégico, à boas-vindas aos convidados, à orientação detalhada sobre o cronograma e logística, à gestão de acessos e ao suporte integral, sempre com cordialidade, prontidão e a devida postura profissional.
 
 Para encontros nacionais e internacionais, nossas recepcionistas bilíngues garantem uma interlocução eficaz com os visitantes estrangeiros, proporcionando uma vivência acessível e de elevado padrão. Adicionalmente, cada Recepcionista para Evento é capacitada a interagir com diversos perfis de público, mantendo um nível de serviço superior e projetando a melhor imagem da sua instituição ou marca.
@@ -187,7 +187,7 @@ Seja para concertos, exposições, encontros corporativos, celebrações privada
     slug: "garcons-para-eventos",
     description: "Atendimento qualificado em A&B.",
     image: buffetImg,
-    imageFocalPoint: "center 20%",
+    imageFocalPoint: "center 10%",
     fullDescription: `Profissionais treinados para serviço de alimentos e bebidas, postura adequada e eficiência na operação.
 
 Atendimento ao público com cordialidade, organização de salão e suporte à produção de catering.
