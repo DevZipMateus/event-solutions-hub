@@ -161,6 +161,7 @@ Abrangendo feiras, congressos, lançamentos, eventos corporativos ou celebraçõ
     slug: "seguranca-para-eventos",
     description: "Proteção e tranquilidade para todos.",
     image: segurancasImg,
+    imageFocalPoint: "center 28%",
     fullDescription: `Nossa equipe de Proteção e Segurança para Eventos é composta por seguranças para evento profissionais altamente qualificados e rigorosamente treinados para assegurar a salvaguarda de participantes, ativos e a fluidez do seu evento. Com uma abordagem estratégica e sutil, eles executam o controle de acesso, vigiam o ambiente, antecipam incidentes e administram prontamente situações de risco, garantindo um evento íntegro e impecavelmente organizado.
 
 Dispomos de especialistas aptos a atuar em eventos de diversas magnitudes – de pequeno a grande porte –, moldando-se precisamente às demandas singulares de cada celebração. Nossa equipe adota diretrizes estritas de segurança, mantendo uma conduta impecável e vigilância constante para proporcionar serenidade total ao público, promotores e convidados.
@@ -212,6 +213,7 @@ Ideal para coquetéis, jantares, feiras e eventos corporativos que demandam serv
     slug: "staff-para-eventos",
     description: "Apoio operacional e organização.",
     image: staffImg,
+    imageFocalPoint: "center 28%",
     fullDescription: `Equipe de staff para credenciamento, orientação de público, organização de filas e apoio logístico.
 
 Profissionais com postura e comunicação alinhadas à identidade do evento, focados em eficiência e experiência dos participantes.
