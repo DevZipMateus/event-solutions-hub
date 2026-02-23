@@ -213,7 +213,7 @@ Ideal para coquetéis, jantares, feiras e eventos corporativos que demandam serv
     slug: "staff-para-eventos",
     description: "Apoio operacional e organização.",
     image: staffImg,
-    imageFocalPoint: "center 28%",
+    imageFocalPoint: "center 23%",
     fullDescription: `Equipe de staff para credenciamento, orientação de público, organização de filas e apoio logístico.
 
 Profissionais com postura e comunicação alinhadas à identidade do evento, focados em eficiência e experiência dos participantes.
