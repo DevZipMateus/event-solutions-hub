@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
@@ -11,6 +12,17 @@ interface ClientTestimonial {
 }
 
 const ClientsSection = () => {
+  useEffect(() => {
+    const existing = document.querySelector('script[src*="webcis"]');
+    if (existing) existing.remove();
+
+    const script = document.createElement('script');
+    script.src = 'https://apps.webcis.com.br/googlereviews.js?code=ChIJLbWT6PhRzpQR9QViRYHWtr0';
+    document.body.appendChild(script);
+
+    return () => { script.remove(); };
+  }, []);
+
   const clients: ClientTestimonial[] = [
     {
       id: "ricardo",
