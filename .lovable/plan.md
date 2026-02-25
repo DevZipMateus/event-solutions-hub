@@ -1,214 +1,43 @@
 
-# Plano: Substituir Todas as Imagens por Imagens Geradas por IA
 
-## Resumo
+## Diagnóstico do Problema
 
-Este plano substituirá **todas as imagens do site** por novas imagens geradas por IA que serão responsivas e contextualizadas para cada seção. As imagens terão alta qualidade e serão otimizadas para funcionar bem em todos os dispositivos.
+O widget WebCIS **não aparece** porque existe um problema de **timing/ordem de execução**:
 
----
+1. O script `googlereviews.js` carrega com `defer`, ou seja, executa quando o HTML termina de carregar
+2. Nesse momento, ele procura a div `.app-review-webcis-appwgr` no DOM
+3. Porém, essa div está **dentro de um componente React** (`ClientsSection.tsx`), que ainda não foi montado quando o script executa
+4. Resultado: o script não encontra a div e não renderiza nada
 
-## Inventário de Imagens a Substituir
+Os network requests confirmam que o script e os dados **carregam com sucesso** (status 200, com 20 avaliações retornadas). O problema é puramente de timing.
 
-### 1. Hero Carousel (5 imagens)
-| Imagem Atual | Contexto para Nova Imagem |
-|--------------|---------------------------|
-| hero-bombeiros.jpg | Bombeiro civil em evento corporativo, uniforme profissional, ambiente de convenção |
-| hero-carregadores.jpg | Carregadores movimentando equipamentos em evento, trabalho em equipe |
-| hero-limpeza.jpg | Equipe de limpeza profissional em evento, uniformes, ambiente limpo |
-| hero-recepcionistas.jpg | Recepcionistas elegantes em balcão de credenciamento |
-| hero-seguranca.jpg | Seguranças profissionais em evento corporativo |
+## Solução
 
-### 2. Banner de Divisão (1 imagem)
-| Imagem Atual | Contexto para Nova Imagem |
-|--------------|---------------------------|
-| section-banner.jpg | Evento corporativo de grande porte em andamento, atmosfera profissional |
+Mover a div `.app-review-webcis-appwgr` para **fora do React**, diretamente no `index.html`, e usar um `useEffect` no componente `ClientsSection` para mover essa div para dentro da seção de clientes após a montagem do React. Alternativamente (e mais simples):
 
-### 3. Seção de Serviços - Imagem do Profissional (1 imagem)
-| Imagem Atual | Contexto para Nova Imagem |
-|--------------|---------------------------|
-| services-person.png | Profissional de eventos sorrindo, vestimenta formal, fundo transparente |
+### Abordagem recomendada
 
-### 4. Cards de Serviços (9 imagens)
-| Serviço | Contexto para Nova Imagem |
-|---------|---------------------------|
-| Limpeza | Equipe de limpeza atuando em evento |
-| Bombeiros | Bombeiro civil monitorando evento |
-| Carregadores | Logística e movimentação de equipamentos |
-| Tradutores | Intérprete com fone de ouvido em cabine |
-| Recepcionistas | Recepcionista no balcão de credenciamento |
-| Seguranças | Segurança profissional em evento |
-| Garçons/Buffet | Garçom servindo em evento elegante |
-| Staff | Equipe de apoio organizando evento |
-| Locações | Estruturas de eventos (tendas, palcos) |
+No componente `ClientsSection.tsx`, adicionar um `useEffect` que re-executa o script do WebCIS após o componente montar, garantindo que a div já existe no DOM:
 
-### 5. Galerias de Serviços (30+ imagens)
-Cada serviço tem sua galeria de fotos que será substituída:
-- Limpeza: 6 imagens
-- Bombeiro: 6 imagens
-- Carregadores: 3 imagens
-- Recepcionistas: 6 imagens
-- Seguranças: 6 imagens
-- Buffet/Garçons: 6 imagens
+1. **`src/components/ClientsSection.tsx`** — Adicionar um `useEffect` que, após a montagem do componente, injeta dinamicamente o script `googlereviews.js` (removendo o atributo `defer`), para que ele encontre a div já renderizada no DOM.
 
-### 6. Feedback de Clientes (16 imagens)
-| Cliente | Imagens |
-|---------|---------|
-| Thiago Rosinhole | 3 imagens de exposição de arte |
-| Saudosa Maloca | 11 imagens de festival de samba |
-| Shopping Frei Caneca | 2 imagens de congresso |
+2. **`index.html`** — Remover o `<script defer src="https://apps.webcis.com.br/googlereviews.js?...">` de lá, pois será carregado dinamicamente pelo React.
 
----
+### Detalhes técnicos
 
-## Abordagem Técnica
-
-### Geração de Imagens com IA
-
-Para gerar imagens de alta qualidade e responsivas, vou usar o **Lovable AI com o modelo google/gemini-3-pro-image-preview** (Nano banana pro), que produz resultados superiores para imagens profissionais.
-
-### Configuração Necessária
-
-1. **Criar Edge Function** para geração de imagens
-2. **Criar página de administração** para gerar e gerenciar imagens
-3. **Armazenar imagens** no Lovable Cloud Storage
-4. **Atualizar referências** no código
-
-### Dimensões Responsivas
-
-As imagens serão geradas em formato paisagem widescreen (16:9 ou 3:2) com resolução adequada para:
-- Desktop: 1920x1080
-- Tablet: 1280x720  
-- Mobile: 640x360
-
----
-
-## Etapas de Implementação
-
-### Etapa 1: Configurar Infraestrutura
-- Criar bucket de storage para imagens geradas
-- Criar edge function para geração de imagens via Lovable AI
-
-### Etapa 2: Criar Página de Administração
-- Interface para gerar imagens por contexto
-- Preview das imagens geradas
-- Upload automático para storage
-
-### Etapa 3: Gerar Imagens do Hero Carousel (5 imagens)
-- Bombeiros, Carregadores, Limpeza, Recepcionistas, Seguranças
-
-### Etapa 4: Gerar Imagens da Seção de Serviços (10 imagens)
-- 9 cards de serviços + 1 imagem do profissional
-
-### Etapa 5: Gerar Imagem do Banner de Divisão (1 imagem)
-
-### Etapa 6: Gerar Imagens das Galerias (30+ imagens)
-- Múltiplas variações para cada serviço
-
-### Etapa 7: Gerar Imagens de Feedback de Clientes (16 imagens)
-- Exposição de arte, Festival de samba, Congresso
-
-### Etapa 8: Atualizar Referências no Código
-- Substituir imports em services-data.ts
-- Atualizar paths em CasesCarousel.tsx
-- Atualizar paths das galerias
-
----
-
-## Detalhes Técnicos
-
-### Edge Function: generate-image
-
-```text
-POST /functions/v1/generate-image
-Body: { prompt: string, category: string }
-Response: { imageUrl: string }
+```typescript
+// No ClientsSection.tsx, adicionar:
+useEffect(() => {
+  const existing = document.querySelector('script[src*="webcis"]');
+  if (existing) existing.remove();
+  
+  const script = document.createElement('script');
+  script.src = 'https://apps.webcis.com.br/googlereviews.js?code=ChIJLbWT6PhRzpQR9QViRYHWtr0';
+  document.body.appendChild(script);
+  
+  return () => { script.remove(); };
+}, []);
 ```
 
-### Storage Bucket Structure
+Isso garante que quando o script executa, a div `.app-review-webcis-appwgr` já existe no DOM e as avaliações do Google serão renderizadas corretamente.
 
-```text
-/images
-  /hero
-    bombeiros.webp
-    carregadores.webp
-    limpeza.webp
-    recepcionistas.webp
-    seguranca.webp
-  /services
-    limpeza.webp
-    bombeiros.webp
-    ...
-  /gallery
-    /limpeza
-      1.webp, 2.webp, ...
-    /bombeiros
-      1.webp, 2.webp, ...
-  /cases
-    /thiago-rosinhole
-      1.webp, 2.webp, 3.webp
-    /saudosa-maloca
-      1.webp, 2.webp, ...
-  /banner
-    section-banner.webp
-  /person
-    services-person.webp
-```
-
-### Prompts de Exemplo
-
-**Hero - Bombeiros:**
-> "Professional civil firefighter at a corporate event in Brazil, wearing official uniform, monitoring a convention center, modern lighting, photorealistic, high quality, 16:9 aspect ratio"
-
-**Hero - Recepcionistas:**
-> "Elegant female receptionist at corporate event check-in desk, professional attire, welcoming smile, modern conference registration area, photorealistic, high quality, 16:9 aspect ratio"
-
-**Galeria - Saudosa Maloca:**
-> "Vibrant Brazilian samba festival, colorful decorations, crowd enjoying music, professional event photography style, warm lighting, photorealistic"
-
----
-
-## Arquivos a Modificar
-
-1. **Novos arquivos:**
-   - `supabase/functions/generate-image/index.ts`
-   - `src/pages/admin/ImageGenerator.tsx` (opcional)
-
-2. **Arquivos a atualizar:**
-   - `src/lib/services-data.ts` - URLs das imagens de serviços
-   - `src/components/HeroCarousel.tsx` - URLs do hero
-   - `src/components/BannerSection.tsx` - URL do banner
-   - `src/components/CasesCarousel.tsx` - URLs dos cases
-   - `src/components/ServicesSection.tsx` - URL da imagem do profissional
-
----
-
-## Considerações de Responsividade
-
-- Todas as imagens usarão formato **WebP** para melhor compressão
-- Proporções **16:9** para heroes e banners (ótimo para widescreen)
-- Proporções **4:5** ou **3:4** para cards verticais
-- CSS com `object-fit: cover` e `object-position` ajustável
-- Lazy loading para otimizar performance
-
----
-
-## Estimativa de Tempo
-
-| Etapa | Tempo Estimado |
-|-------|---------------|
-| Configurar infraestrutura | 5 minutos |
-| Gerar 5 imagens hero | 3 minutos |
-| Gerar 10 imagens serviços | 5 minutos |
-| Gerar 1 imagem banner | 1 minuto |
-| Gerar 30+ imagens galerias | 15 minutos |
-| Gerar 16 imagens cases | 8 minutos |
-| Atualizar código | 10 minutos |
-| **Total** | **~45 minutos** |
-
----
-
-## Observações
-
-- A geração de imagens será feita em lotes para otimizar o tempo
-- Cada imagem terá prompts específicos para garantir contexto adequado
-- As imagens serão armazenadas no Cloud Storage para acesso rápido e CDN
-- URLs públicas serão usadas para facilitar a integração
