@@ -106,6 +106,11 @@ const ClientsSection = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* WebCIS Reviews Widget */}
+        <div className="mt-10 sm:mt-14 md:mt-16">
+          <div className="app-review-webcis-appwgr"></div>
+        </div>
       </div>
     </section>
   );
