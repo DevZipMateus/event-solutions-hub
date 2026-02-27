@@ -129,15 +129,6 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            <a
-              href="https://confidenceeventos.com.br/blog"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide"
-            >
-              Blog
-            </a>
-
             <button
               onClick={() => scrollToSection("#contato")}
               className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-primary/90 transition-colors duration-200"
@@ -208,15 +199,6 @@ const Header = () => {
                   )}
                 </AnimatePresence>
               </div>
-
-              <a
-                href="https://confidenceeventos.com.br/blog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-left py-2"
-              >
-                Blog
-              </a>
 
               <button
                 onClick={() => scrollToSection("#contato")}
